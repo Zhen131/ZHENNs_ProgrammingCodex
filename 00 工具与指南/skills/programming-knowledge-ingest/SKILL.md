@@ -1,6 +1,6 @@
 ---
 name: programming-knowledge-ingest
-description: Import programming knowledge into the 编程宝典 Obsidian vault. Use when the user asks to入库, add a learning packet, create or update technical cards, maintain Obsidian wikilinks/tags/indexes, or connect new programming knowledge to existing notes.
+description: Import programming knowledge into the 编程宝典 Obsidian vault. Use when the user asks to入库, add a learning packet, create or update technical cards, maintain direct Obsidian wikilinks/tags, or connect new programming knowledge to existing notes.
 ---
 
 # Programming Knowledge Ingest
@@ -15,7 +15,6 @@ Before editing, read:
 
 - `AGENTS.md`
 - `00 工具与指南/编程知识入库指南.md`
-- Existing relevant index files in `01 地图与索引`
 
 ## Workflow
 
@@ -50,11 +49,11 @@ Before editing, read:
    - If a new note deepens an old note, append a short `## 进一步理解` entry to the old note.
    - If a problem card points to a technology, make sure the technology card links back where useful.
 
-7. Update indexes.
-   - Technical cards: `01 地图与索引/技术卡片索引.md`
-   - Problem cards: `01 地图与索引/问题卡片索引.md`
-   - Project records: `01 地图与索引/项目学习记录索引.md`
-   - Major structural changes: `01 地图与索引/编程宝典总览.md`
+7. Verify direct graph links.
+   - Technical cards should link to related technical cards directly.
+   - Problem cards should link to the technical cards that solve the pain point.
+   - Project records should link to the technical cards and problem cards they produced.
+   - Do not create extra routing files as a navigation layer.
 
 8. Verify.
    - Confirm new files are in the right folder.
@@ -81,6 +80,4 @@ After入库, report:
 - Created files
 - Updated files
 - Main links added
-- Indexes updated
 - Items left as `待确认`
-
