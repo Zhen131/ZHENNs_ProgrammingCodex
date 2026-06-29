@@ -35,6 +35,8 @@ TypeScript 可以粗略理解成 JavaScript 的增强版。它保留 JavaScript 
 
 在 React 项目里，TypeScript 常和 [[TSX（TypeScript XML）]] 一起使用：逻辑和类型写在 TypeScript 中，界面结构通过 JSX 风格语法写在同一个组件文件中。
 
+放进 Lego（乐高）类比里，JavaScript / TypeScript 更像给零件写行为和接口规则：这个 [[UI Component（UI 组件）]] 需要哪些 props、点击后触发什么逻辑、状态如何变化。TypeScript 额外把这些规则标清楚，让读代码时少靠猜。
+
 ## 典型使用场景
 
 - 给业务对象建模，例如交易、持仓、价格快照。
@@ -51,10 +53,12 @@ TypeScript 主要在开发阶段帮助理解和检查代码。它不能替代运
 - [[JavaScript Runtime（JavaScript 运行时）]] 解释代码最终运行在哪些环境里。
 - [[TSX（TypeScript XML）]] 是 TypeScript 和 JSX 结合后常用于写 React 组件的文件语法。
 - [[React（React UI 库）]] 项目常用 TypeScript 来约束 component 的数据结构。
+- [[UI Component（UI 组件）]] 是 TypeScript 在 React 场景里经常描述的数据和行为对象。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了 TypeScript 在前端分层中的位置。
 
 ## 关联
 
 - [[TSX（TypeScript XML）]]
 - [[React（React UI 库）]]
+- [[UI Component（UI 组件）]]
 - [[JavaScript Runtime（JavaScript 运行时）]]
