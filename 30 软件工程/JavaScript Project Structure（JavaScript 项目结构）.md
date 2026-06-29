@@ -53,7 +53,7 @@ updated: 2026-06-29
 第三层：基本别作为读项目入口。
 
 - [[node_modules（依赖实体目录）]]：第三方依赖实体。
-- `.next/`：Next.js 构建缓存。
+- `.next/`：[[Next.js（Next 应用框架）]] 生成的构建产物和缓存。
 - `.git/`：Git 内部数据库。
 
 ## 典型使用场景
@@ -72,15 +72,23 @@ updated: 2026-06-29
 - [[Node.js（Node 运行环境）]] 提供运行开发工具的环境。
 - [[npm（Node 包管理器）]] 通过 package.json 运行项目命令。
 - [[Dependency（依赖）]] 帮助判断 package 在项目里的角色。
+- [[Next.js（Next 应用框架）]] 会通过 `src/app/`、`page.tsx`、`layout.tsx`、`.next/` 等约定影响项目结构。
 - [[为什么读 JavaScript 项目要先识别工程骨架]] 是对应问题入口。
 
 ## 在项目中的表现
 
 - [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：这次学习的主线就是从账本项目根目录识别哪些该看、哪些知道即可、哪些基本别读。
+- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习进一步区分了 React component、TSX、Tailwind、Next.js 约定和 `.next/` 生成物。
+
+## 进一步理解
+
+- [[Next.js App Router（Next 应用路由）]]：`src/app/page.tsx` 和 `src/app/layout.tsx` 不是普通文件名，而是 Next.js 通过目录和文件名约定识别应用结构的例子。
+- [[为什么 .next 不用读]]：`.next/` 是框架加工项目后的产物和缓存，不是业务源码入口。
 
 ## 关联
 
 - [[package.json（项目清单）]]
 - [[node_modules（依赖实体目录）]]
 - [[Dependency（依赖）]]
+- [[Next.js（Next 应用框架）]]
 - [[为什么读 JavaScript 项目要先识别工程骨架]]

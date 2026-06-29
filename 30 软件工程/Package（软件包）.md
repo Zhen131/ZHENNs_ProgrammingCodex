@@ -34,13 +34,13 @@ Package 把可复用能力封装成可安装单元，降低重复造轮子的成
 
 ## 典型使用场景
 
-- `react`：写 UI 组件。
-- `next`：构建 Next.js 应用。
+- `react`：通过 [[React（React UI 库）]] 写 UI 组件。
+- `next`：通过 [[Next.js（Next 应用框架）]] 构建 React 应用。
 - `decimal.js`：做高精度小数计算。
-- `typescript`：做类型检查和编译。
+- `typescript`：通过 [[TypeScript（类型化 JavaScript）]] 做类型检查和编译。
 - `vitest`：运行测试。
 - `eslint`：做代码检查。
-- `tailwindcss`：生成样式工具类。
+- `tailwindcss`：提供 [[Tailwind CSS（Tailwind 样式工具）]]。
 
 ## 局限性
 
@@ -52,6 +52,7 @@ Package 复用了外部能力，也引入了外部依赖。依赖越多，项目
 - [[Dependency（依赖）]] 描述项目为什么需要某个 package。
 - [[package.json（项目清单）]] 声明项目直接依赖哪些 package。
 - [[node_modules（依赖实体目录）]] 保存安装后的 package 实体。
+- [[Framework（框架）]]、UI library 和样式工具都可以作为 package 被安装。
 
 ## 在项目中的表现
 
@@ -62,4 +63,7 @@ Package 复用了外部能力，也引入了外部依赖。依赖越多，项目
 - [[Dependency（依赖）]]
 - [[npm（Node 包管理器）]]
 - [[package.json（项目清单）]]
+- [[React（React UI 库）]]
+- [[Next.js（Next 应用框架）]]
+- [[Tailwind CSS（Tailwind 样式工具）]]
 - [[为什么不要从 node_modules 读项目]]
