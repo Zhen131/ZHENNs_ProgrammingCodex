@@ -2,37 +2,46 @@
 
 > 中文名：编程宝典
 
-`ZHENNs_ProgrammingCodex` is my personal programming knowledge vault built with Obsidian and Git.
+`ZHENNs_ProgrammingCodex` 是我的个人编程知识库，用 Obsidian 组织知识，用 Git 管理版本。
 
-This repository is designed for one long-term purpose: turning scattered programming lessons into a connected, maintainable knowledge graph.
+这个仓库不是一本传统教材，也不是一个已经完成的教程网站。它更像是一棵正在生长的技术树：把我在学习、写项目、读代码、使用 AI 编程时遇到的零散知识，慢慢整理成一张可以复用、可以回看、可以继续扩展的知识图谱。
 
-## Why This Exists
+## 为什么要做这个仓库
 
-Modern programming is becoming easier to start, especially with AI coding and vibe coding. But that also creates a real problem: code can quickly become a black box.
+现在写代码变得越来越容易了。
 
-If I only let AI write code for me, I may finish features faster, but I will lose the ability to understand, debug, maintain, and evolve the system.
+AI coding 和 vibe coding 可以让人很快写出功能，但它也带来了一个很严重的问题：代码很容易变成 black box（黑盒）。
 
-This vault exists to prevent that.
+如果我只让 AI 帮我写代码，而不理解代码背后的技术、历史、问题和限制，那么项目可能短期能跑，长期却会越来越难维护。
 
-It records not only what a technology is, but also:
+所以我建立了这个知识库。
 
-- what problem existed before it appeared
-- how people solved that problem before
-- what the technology changed
-- what it is good at
-- what its limitations are
-- how it connects to other programming ideas
-- how I encountered it in real projects
+它的目标不是简单地收藏资料，而是记录我真正理解一个技术的过程：
 
-## Learning Style
+- 这个技术出现前，人们遇到了什么问题？
+- 以前是怎么解决的？
+- 这个技术为什么会出现？
+- 它真正解决了什么？
+- 它有什么局限？
+- 它和其他技术有什么关系？
+- 我是在什么项目、什么 bug、什么困惑中学会它的？
 
-The notes use a mixed Chinese-English style:
+## 我的学习方式
 
-- Chinese is used for reasoning, explanation, reflection, and learning logic.
-- English is used for technical terms, because my CS learning, exams, and technical communication often happen in English.
-- First mentions usually follow this format: `Tokenization（分词）`, `Embedding（嵌入）`, `Virtual DOM（虚拟DOM）`.
+这个知识库采用“中文逻辑 + 英文术语”的写法。
 
-## Vault Structure
+原因很简单：我的母语是中文，用中文解释逻辑更容易理解；但我的 CS 学习、考试和技术交流又经常发生在英文环境里，所以技术名词必须保留英文。
+
+例如：
+
+- `Tokenization（分词）`
+- `Embedding（嵌入）`
+- `Virtual DOM（虚拟DOM）`
+- `Dependency Injection（依赖注入）`
+
+解释用中文，术语用英文。这样既能理解得快，也能和课堂、考试、文档、代码里的英文概念对上。
+
+## 知识库结构
 
 ```text
 编程宝典/
@@ -49,15 +58,15 @@ The notes use a mixed Chinese-English style:
 └── 90 素材与临时笔记/
 ```
 
-The folder structure makes files easy to find. Obsidian wikilinks and tags make the knowledge graph connected.
+文件夹负责降低查找成本，Obsidian 的 `[[wikilink]]` 和标签负责建立知识图谱。
 
-## Core Note Types
+## 三类核心笔记
 
-### Technical Cards
+### 技术卡片
 
-Technical cards are the backbone of the vault.
+技术卡片是这个知识库的主干。
 
-Examples:
+它用来记录稳定、可复用的技术概念，例如：
 
 - `Class（类）`
 - `Closure（闭包）`
@@ -65,25 +74,32 @@ Examples:
 - `Tokenization（分词）`
 - `Dependency Injection（依赖注入）`
 
-### Problem Cards
+### 问题卡片
 
-Problem cards explain why a technology matters.
+问题卡片从痛点出发，解释“为什么需要某个技术”。
 
-Examples:
+例如：
 
-- Why do we need `Virtual DOM（虚拟DOM）`?
-- Why does async code create `Callback Hell（回调地狱）`?
-- Why can AI-generated code become a black box?
+- 为什么需要 `Virtual DOM（虚拟DOM）`？
+- 为什么异步代码会产生 `Callback Hell（回调地狱）`？
+- 为什么 AI 生成的代码容易变成 black box？
+- 为什么数据库查询会变慢？
 
-### Project Learning Records
+我希望自己不是死记技术名词，而是理解技术背后的问题。
 
-Project learning records capture where a lesson came from: a bug, a feature, a refactor, a code review, or a moment when I realized I did not understand something deeply enough.
+### 项目学习记录
 
-They are evidence, not the final knowledge center. The final knowledge should grow into technical cards and problem cards.
+项目学习记录用来保存知识的来源。
 
-## Repository Goal
+它记录我是在什么项目、什么功能、什么 bug、什么代码阅读过程中学到某个知识点的。
 
-This is not a textbook and not a polished tutorial site.
+项目学习记录不是最终的知识中心。它更像证据和上下文，最后应该连接到技术卡片和问题卡片。
 
-It is a living knowledge base for becoming a better programmer: one who can use AI, but still understands the code.
+## 这个仓库的目标
+
+这个仓库会持续更新。
+
+它记录的是一个 CS 学生和程序员如何在 AI 时代学习编程、理解代码、维护项目、避免被黑盒吞掉的过程。
+
+我希望它最后不只是一个笔记仓库，而是我的个人技术地图。
 
