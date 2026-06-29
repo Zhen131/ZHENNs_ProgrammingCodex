@@ -57,10 +57,6 @@ Framework（框架）：给你一套组织应用的规则和流程。
 - [[JavaScript Project Structure（JavaScript 项目结构）]] 帮助识别框架配置和生成物。
 - [[React 和 Next.js 有什么区别]] 解释了 UI library 和 application framework 的区别。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把框架从抽象词理解成“代码、规则、约定和运行流程”。
-
 ## 关联
 
 - [[Next.js（Next 应用框架）]]

@@ -58,11 +58,6 @@ npm 不是业务代码，也不是运行环境本身。它依赖 [[Node.js（Nod
 - [[package.json（项目清单）]] 是 npm 的主要入口文件。
 - [[为什么 package.json 是读 JavaScript 项目的入口]] 解释了为什么工程师会先看 package.json。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：账本项目通过 npm scripts 启动 Next.js、运行 Vitest、执行构建和检查。
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 `npm run dev` 理解为启动 Next.js 开发服务器的项目命令入口。
-
 ## 关联
 
 - [[Node.js（Node 运行环境）]]

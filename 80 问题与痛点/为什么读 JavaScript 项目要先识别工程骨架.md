@@ -54,7 +54,6 @@ updated: 2026-06-29
 
 ## 关联
 
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]
 - [[为什么不要从 node_modules 读项目]]
 - [[为什么 package.json 是读 JavaScript 项目的入口]]
 - [[为什么要区分 dependencies 和 devDependencies]]

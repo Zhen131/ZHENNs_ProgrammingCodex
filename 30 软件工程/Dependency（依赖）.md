@@ -70,10 +70,6 @@ updated: 2026-06-29
 - [[package-lock.json（依赖锁文件）]] 锁定依赖树的精确版本。
 - [[为什么要区分 dependencies 和 devDependencies]] 是这个概念背后的问题入口。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：账本项目中，`next`、`react`、`decimal.js` 是运行时依赖；`typescript`、`vitest`、`eslint`、`tailwindcss`、`@types/node` 主要是开发依赖。
-
 ## 关联
 
 - [[Package（软件包）]]

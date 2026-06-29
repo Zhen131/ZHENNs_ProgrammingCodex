@@ -53,14 +53,8 @@ TypeScript 主要在开发阶段帮助理解和检查代码。它不能替代运
 - [[React（React UI 库）]] 项目常用 TypeScript 来约束 component 的数据结构。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了 TypeScript 在前端分层中的位置。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习中，TypeScript 被理解为写组件逻辑和业务数据结构的语言层。
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：上一条学习记录中，`tsconfig.json` 和 `@types/node` 还是待补内容。
-
 ## 关联
 
 - [[TSX（TypeScript XML）]]
 - [[React（React UI 库）]]
 - [[JavaScript Runtime（JavaScript 运行时）]]
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]
