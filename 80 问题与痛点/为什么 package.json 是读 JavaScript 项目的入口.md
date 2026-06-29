@@ -52,6 +52,5 @@ src/
 
 ## 关联
 
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]
 - [[为什么不要从 node_modules 读项目]]
 - [[为什么读 JavaScript 项目要先识别工程骨架]]

@@ -48,13 +48,8 @@ updated: 2026-06-29
 - [[Next.js（Next 应用框架）]] 会把某些 component 赋予页面或布局角色。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了组件为什么只是前端分层中的一层。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习中，component 被类比成乐高小零件。
-
 ## 关联
 
 - [[React（React UI 库）]]
 - [[TSX（TypeScript XML）]]
 - [[Next.js App Router（Next 应用路由）]]
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]

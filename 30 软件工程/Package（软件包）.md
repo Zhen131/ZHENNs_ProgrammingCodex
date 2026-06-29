@@ -54,10 +54,6 @@ Package 复用了外部能力，也引入了外部依赖。依赖越多，项目
 - [[node_modules（依赖实体目录）]] 保存安装后的 package 实体。
 - [[Framework（框架）]]、UI library 和样式工具都可以作为 package 被安装。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：账本项目中的 `next`、`react`、`decimal.js`、`typescript`、`vitest` 都是 package。
-
 ## 关联
 
 - [[Dependency（依赖）]]

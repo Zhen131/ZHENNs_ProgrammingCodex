@@ -68,11 +68,6 @@ package.json 是声明文件，不是依赖实体。真正下载到本地的 pac
 - [[Dependency（依赖）]] 区分 `dependencies` 与 `devDependencies`。
 - [[JavaScript Project Structure（JavaScript 项目结构）]] 把 package.json 视为优先阅读入口之一。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：账本项目的 package.json 说明了 `next`、`react`、`decimal.js`、`typescript`、`vitest` 等依赖和 `dev/test/build` 命令。
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习进一步理解了 `next`、`react`、`typescript`、`tailwindcss` 等依赖分别对应框架、UI、类型和样式层。
-
 ## 进一步理解
 
 - [[Next.js（Next 应用框架）]]：`npm run dev` 常会通过 package.json 的 scripts 启动 `next dev`，这说明 package.json 不只是依赖清单，也是框架运行入口。

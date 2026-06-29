@@ -75,11 +75,6 @@ updated: 2026-06-29
 - [[Next.js（Next 应用框架）]] 会通过 `src/app/`、`page.tsx`、`layout.tsx`、`.next/` 等约定影响项目结构。
 - [[为什么读 JavaScript 项目要先识别工程骨架]] 是对应问题入口。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：这次学习的主线就是从账本项目根目录识别哪些该看、哪些知道即可、哪些基本别读。
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习进一步区分了 React component、TSX、Tailwind、Next.js 约定和 `.next/` 生成物。
-
 ## 进一步理解
 
 - [[Next.js App Router（Next 应用路由）]]：`src/app/page.tsx` 和 `src/app/layout.tsx` 不是普通文件名，而是 Next.js 通过目录和文件名约定识别应用结构的例子。

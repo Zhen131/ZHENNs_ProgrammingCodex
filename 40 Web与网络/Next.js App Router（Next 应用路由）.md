@@ -68,10 +68,6 @@ layout.tsx 和 page.tsx 是 React component。
 - [[UI Component（UI 组件）]] 是这些文件的 React 本质。
 - [[TSX 和 Next.js 是一回事吗]] 解释语法和框架规则的区别。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 `page.tsx` 理解为页面文件，把 `layout.tsx` 理解为共同外壳。
-
 ## 关联
 
 - [[Next.js（Next 应用框架）]]
