@@ -33,11 +33,15 @@ function TradeButton() {
 }
 ```
 
+用 Lego（乐高）类比，React 像一套界面零件系统。它关心的不是一次性写出整面墙，而是把页面拆成按钮、表单、列表、卡片这些 component，再把 component 组合成更大的界面。
+
 ## 核心机制
 
 React 属于 JavaScript / TypeScript 生态。普通 React 前端项目里，组件逻辑通常用 JavaScript 或 [[TypeScript（类型化 JavaScript）]] 写，界面结构通常用 [[JSX（JavaScript XML）]] 或 [[TSX（TypeScript XML）]] 描述，样式再交给 [[CSS（层叠样式表）]] 或 [[Tailwind CSS（Tailwind 样式工具）]]。
 
 React 更偏 UI 层。它不等于 [[Next.js（Next 应用框架）]]，Next.js 是在 React 之上组织完整应用的 framework。
+
+所以在乐高类比里，React 负责“有 component 这种零件、零件可以组合、数据变化后零件可以重新显示”；Next.js 负责“这些零件如何按页面和路由拼成完整作品”。
 
 ## 典型使用场景
 
