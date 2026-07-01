@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/问题卡片, 问题/依赖管理, 领域/软件工程, 语言/JavaScript]
 aliases: [dependencies 和 devDependencies 的区别, 为什么区分运行时依赖和开发依赖, 运行时依赖 vs 开发依赖]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-01
 ---
 
 # 为什么要区分 dependencies 和 devDependencies
@@ -32,12 +32,16 @@ updated: 2026-06-29
 
 这背后的稳定概念是 [[Dependency（依赖）]]。
 
+可以把它们先理解成“我要 npm 帮我安装哪些包”的两种清单：一个偏项目运行，一个偏开发工具链。npm 根据这些声明安装 package，安装结果进入 [[node_modules（依赖实体目录）]]，精确版本进入 [[package-lock.json（依赖锁文件）]]。
+
 ## 相关技术
 
 - [[Dependency（依赖）]]
 - [[package.json（项目清单）]]
 - [[Package（软件包）]]
 - [[npm（Node 包管理器）]]
+- [[node_modules（依赖实体目录）]]
+- [[package-lock.json（依赖锁文件）]]
 
 ## 我的理解
 

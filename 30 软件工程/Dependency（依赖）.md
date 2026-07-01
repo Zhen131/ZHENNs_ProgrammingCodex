@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
 aliases: [dependency, dependencies, devDependencies, 依赖, 运行时依赖, 开发依赖]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-01
 ---
 
 # Dependency（依赖）
@@ -25,6 +25,13 @@ updated: 2026-06-29
 - `devDependencies（开发依赖）`：开发、测试、构建、类型检查、代码检查时需要。
 
 这个区分能帮助理解项目结构和工具链，而不是把所有 package 混在一起。
+
+在 npm 项目里可以先这样记：
+
+```text
+dependencies/devDependencies
+= 我要 npm 帮我安装哪些包
+```
 
 ## 核心机制
 
@@ -68,6 +75,7 @@ updated: 2026-06-29
 - [[Package（软件包）]] 是依赖的实体单元。
 - [[package.json（项目清单）]] 声明依赖分类。
 - [[package-lock.json（依赖锁文件）]] 锁定依赖树的精确版本。
+- [[npm scripts（npm 脚本）]] 里的命令常常来自某个依赖安装后暴露的工具。
 - [[为什么要区分 dependencies 和 devDependencies]] 是这个概念背后的问题入口。
 
 ## 关联
@@ -75,4 +83,5 @@ updated: 2026-06-29
 - [[Package（软件包）]]
 - [[package.json（项目清单）]]
 - [[node_modules（依赖实体目录）]]
+- [[npm scripts（npm 脚本）]]
 - [[为什么要区分 dependencies 和 devDependencies]]
