@@ -11,7 +11,7 @@ updated: 2026-07-01
 
 ## 一句话
 
-`npm（Node Package Manager，Node 包管理器）` 是 Node 生态里的包管理器，用来安装 package、管理依赖，并执行项目脚本。
+`npm（Node Package Manager，Node 包管理器）` 是 Node 生态里的包管理器，用来安装 package、管理依赖，并执行项目脚本；在遥控器类比里，它是真正按按钮并解释按钮含义的人。
 
 ## 背景：它出现前的问题
 
@@ -41,6 +41,9 @@ npm 主要围绕三个东西工作：
 `npm run dev` 这类命令本质上是在执行 package.json 的 `scripts` 中定义好的 [[npm scripts（npm 脚本）]]。安装依赖后，package 暴露的可执行命令通常会出现在 `node_modules/.bin`，npm 执行 scripts 时可以找到这些本地命令。
 
 ```text
+npm
+= 真正按按钮并解释按钮含义的人
+
 npm install
 = 按 package.json 和 package-lock.json 安装依赖
 
@@ -48,7 +51,7 @@ node_modules
 = npm 实际下载安装到本地的包
 
 package-lock.json
-= npm 自动记录的精确安装结果
+= 机器采购清单和精确型号记录
 ```
 
 ## 典型使用场景

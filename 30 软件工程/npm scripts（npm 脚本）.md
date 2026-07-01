@@ -11,7 +11,7 @@ updated: 2026-07-01
 
 ## 一句话
 
-`npm scripts（npm 脚本）` 是写在 [[package.json（项目清单）]] 里的命令快捷名，让开发者用 `npm run xxx` 执行项目约定好的开发、测试、构建命令。
+`npm scripts（npm 脚本）` 是写在 [[package.json（项目清单）]] 里的命令快捷名，像遥控器上的按钮，让开发者用 `npm run xxx` 执行项目约定好的开发、测试、构建命令。
 
 ## 背景：它出现前的问题
 
@@ -45,13 +45,28 @@ npm run build
 
 ```text
 scripts
-= 我给常用命令起的快捷名字
+= 遥控器上的按钮
 
 node_modules/.bin
-= 这些包暴露出来的可执行命令
+= 机器暴露出来的开关入口
 ```
 
 当执行 `npm run dev` 时，[[npm（Node 包管理器）]] 会读取 package.json 的 `scripts.dev`。如果里面写的是 `next dev`，npm 会在执行脚本时把 `node_modules/.bin` 加进命令查找路径，所以本地安装在 [[node_modules（依赖实体目录）]] 里的 `next` 命令也能被找到。
+
+换成遥控器类比：
+
+```text
+npm run dev
+= 你让 npm 去按 package.json 里的 dev 按钮
+
+"dev": "next dev"
+= 按 dev 按钮时，要启动 next 这台机器，并传入 dev 模式
+
+node_modules/.bin/next
+= next 这台机器暴露出来的启动入口
+```
+
+接下来就是 [[Next.js（Next 应用框架）]] 自己开始运行，例如启动开发服务器。
 
 ## 典型使用场景
 
@@ -69,6 +84,7 @@ npm scripts 只是命令快捷入口，不是工具本体。真正的工具 pack
 - [[package.json（项目清单）]] 保存 scripts 字段。
 - [[npm（Node 包管理器）]] 负责读取并执行 scripts。
 - [[node_modules（依赖实体目录）]] 保存本地安装的工具实体。
+- [[Next.js（Next 应用框架）]] 的 `next dev` 是 npm scripts 调用本地工具的典型例子。
 - [[Dependency（依赖）]] 解释这些工具为什么会被安装。
 - [[为什么 package.json 是读 JavaScript 项目的入口]] 解释为什么 scripts 是读项目时的关键入口。
 
@@ -77,5 +93,6 @@ npm scripts 只是命令快捷入口，不是工具本体。真正的工具 pack
 - [[package.json（项目清单）]]
 - [[npm（Node 包管理器）]]
 - [[node_modules（依赖实体目录）]]
+- [[Next.js（Next 应用框架）]]
 - [[Dependency（依赖）]]
 - [[为什么 package.json 是读 JavaScript 项目的入口]]

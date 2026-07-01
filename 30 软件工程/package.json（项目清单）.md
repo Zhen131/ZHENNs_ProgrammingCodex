@@ -11,7 +11,7 @@ updated: 2026-07-01
 
 ## 一句话
 
-`package.json（项目清单）` 是 JavaScript/TypeScript 项目的核心说明文件，记录项目元信息、命令脚本和依赖清单，可以先粗略理解成项目说明书。
+`package.json（项目清单）` 是 JavaScript/TypeScript 项目的核心说明文件，记录项目元信息、命令脚本和依赖清单，可以先粗略理解成项目说明书，也可以理解成 npm 要读取的按钮面板。
 
 ## 背景：它出现前的问题
 
@@ -34,13 +34,13 @@ package.json 给项目提供一个稳定入口：
 
 ```text
 package.json
-= 项目说明书
+= 遥控器说明书 / 按钮面板
 
 scripts
-= 我给常用命令起的快捷名字
+= 遥控器上的按钮
 
 dependencies/devDependencies
-= 我要 npm 帮我安装哪些包
+= 我要 npm 帮我安装哪些机器和零件
 ```
 
 ## 核心机制
@@ -62,6 +62,8 @@ dependencies/devDependencies
 ```
 
 `scripts` 让 [[npm（Node 包管理器）]] 可以执行统一命令，例如 `npm run dev`。它对应的稳定概念是 [[npm scripts（npm 脚本）]]。`dependencies` 和 `devDependencies` 描述 [[Dependency（依赖）]] 的不同阶段。
+
+例如 `npm run dev` 可以理解成：让 npm 去按 package.json 里的 `dev` 按钮。npm 看到 `"dev": "next dev"` 后，会去启动本地安装的 `next` 工具，并把 `dev` 当成传给这个工具的模式参数。
 
 ## 典型使用场景
 
@@ -86,6 +88,7 @@ package.json 是声明文件，不是依赖实体。真正下载到本地的 pac
 
 - [[Next.js（Next 应用框架）]]：`npm run dev` 常会通过 package.json 的 scripts 启动 `next dev`，这说明 package.json 不只是依赖清单，也是框架运行入口。
 - [[npm scripts（npm 脚本）]]：`scripts` 不是工具本体，而是给常用命令起的项目级快捷名。
+- [[package-lock.json（依赖锁文件）]]：package.json 说“我要什么机器”，lockfile 记录“实际装的是哪个精确型号”。
 
 ## 关联
 
