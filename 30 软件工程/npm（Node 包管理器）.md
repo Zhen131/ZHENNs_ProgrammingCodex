@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
 aliases: [npm, Node Package Manager, Node 包管理器, 包管理器]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-01
 ---
 
 # npm（Node 包管理器）
@@ -38,7 +38,18 @@ npm 主要围绕三个东西工作：
 - [[package-lock.json（依赖锁文件）]]：记录精确依赖版本和完整依赖树。
 - [[node_modules（依赖实体目录）]]：保存 npm 下载到本地的依赖实体。
 
-`npm run dev` 这类命令本质上是在执行 package.json 的 `scripts` 中定义好的命令。
+`npm run dev` 这类命令本质上是在执行 package.json 的 `scripts` 中定义好的 [[npm scripts（npm 脚本）]]。安装依赖后，package 暴露的可执行命令通常会出现在 `node_modules/.bin`，npm 执行 scripts 时可以找到这些本地命令。
+
+```text
+npm install
+= 按 package.json 和 package-lock.json 安装依赖
+
+node_modules
+= npm 实际下载安装到本地的包
+
+package-lock.json
+= npm 自动记录的精确安装结果
+```
 
 ## 典型使用场景
 
@@ -56,6 +67,7 @@ npm 不是业务代码，也不是运行环境本身。它依赖 [[Node.js（Nod
 - [[Package（软件包）]] 是 npm 管理的基本单元。
 - [[Dependency（依赖）]] 是项目和 package 之间的需要关系。
 - [[package.json（项目清单）]] 是 npm 的主要入口文件。
+- [[npm scripts（npm 脚本）]] 是 npm 执行项目命令的脚本机制。
 - [[为什么 package.json 是读 JavaScript 项目的入口]] 解释了为什么工程师会先看 package.json。
 
 ## 关联
@@ -63,5 +75,6 @@ npm 不是业务代码，也不是运行环境本身。它依赖 [[Node.js（Nod
 - [[Node.js（Node 运行环境）]]
 - [[Package（软件包）]]
 - [[package.json（项目清单）]]
+- [[npm scripts（npm 脚本）]]
 - [[node_modules（依赖实体目录）]]
 - [[Next.js（Next 应用框架）]]
