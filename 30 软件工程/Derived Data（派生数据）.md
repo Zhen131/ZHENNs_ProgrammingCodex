@@ -59,12 +59,15 @@ Derived Data 这个概念帮助区分：
 持仓记录却显示我有 0.02 BTC
 ```
 
+在 React 业务页面里，如果事实数据由 [[useReducer（React Reducer Hook）]] 管理，reducer 可以成为统一重算派生数据的地方：每次 `ADD_TRADE`、`DELETE_TRADE` 或 `UPDATE_TRADE` 后，都按同一套规则更新或重新计算结果，避免不同组件各算各的。
+
 ## 典型使用场景
 
 - 从订单计算库存。
 - 从交易记录计算持仓。
 - 从明细账计算汇总金额。
 - 从表单输入计算预览结果。
+- 在复杂 React state 更新后统一重算持仓、汇总或校验结果。
 
 ## 局限性
 
@@ -73,10 +76,15 @@ Derived Data 这个概念帮助区分：
 ## 和其他概念的关系
 
 - [[React State（React 状态）]] 可以保存事实数据，也可以短暂保存某些 UI 派生状态，但要小心一致性。
+- [[useReducer（React Reducer Hook）]] 可以把事实数据修改和派生数据重算集中到同一套状态规则中。
+- [[Reducer（状态归约函数）]] 是承载统一重算规则的一种方式。
 - [[为什么派生数据不应该当成事实数据保存]] 是理解派生数据边界的问题入口。
 
 ## 关联
 
 - [[React State（React 状态）]]
+- [[useReducer（React Reducer Hook）]]
+- [[Reducer（状态归约函数）]]
 - [[为什么派生数据不应该当成事实数据保存]]
+- [[为什么复杂 React 状态适合 useReducer]]
 - [[为什么前端页面不能长期依赖写死数据]]

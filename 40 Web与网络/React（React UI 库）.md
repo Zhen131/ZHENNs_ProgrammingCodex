@@ -56,12 +56,15 @@ React 更偏 UI 层。它不等于 [[Next.js（Next 应用框架）]]，Next.js 
 
 在业务页面里，这意味着用户操作后不应该手动修改每一块 DOM，而是生成新的页面状态或业务数据，调用 [[useState（React 状态 Hook）]] 返回的更新方法，让页面根据新 state 重新显示。
 
+当这份 state 的修改规则变复杂时，React 还可以用 [[useReducer（React Reducer Hook）]]：组件通过 `dispatch(action)` 描述用户操作，[[Reducer（状态归约函数）]] 统一计算下一份 state。这样页面组件更专注于“用户做了什么”，业务规则更集中。
+
 ## 典型使用场景
 
 - 拆分账本页面：`LedgerPage`、`TradeForm`、`TradeList`、`PositionTable`。
 - 把重复出现的按钮、表单、表格抽成可复用组件。
 - 在数据变化后更新页面显示。
 - 让列表、汇总和预览从同一份页面状态或事实数据读取结果。
+- 用 useReducer 管理会被多种操作修改的核心业务状态。
 
 ## 局限性
 
@@ -74,20 +77,27 @@ React state 也不是永久数据库。放在页面内存里的账本数据刷�
 - [[UI Component（UI 组件）]] 是 React 的核心组织单元。
 - [[React State（React 状态）]] 让 React 根据数据变化重新渲染页面。
 - [[useState（React 状态 Hook）]] 是创建组件 state 的常见 Hook。
+- [[useReducer（React Reducer Hook）]] 是管理复杂 state 修改规则的常见 Hook。
+- [[Reducer（状态归约函数）]] 让复杂状态变化集中到统一规则层。
 - [[DOM（文档对象模型）]] 是浏览器中的页面结构，React 会帮助开发者减少手动 DOM 同步。
 - [[Next.js（Next 应用框架）]] 基于 React，并提供应用级规则。
 - [[TSX（TypeScript XML）]] 常用于在 TypeScript 中写 React component。
 - [[React 和 Next.js 有什么区别]] 是理解 React 边界的问题入口。
 - [[为什么 React 不推荐手动操作 DOM]] 解释 React 的状态驱动更新为什么重要。
+- [[为什么复杂 React 状态适合 useReducer]] 解释简单状态和复杂状态的管理分界。
 
 ## 关联
 
 - [[UI Component（UI 组件）]]
 - [[React State（React 状态）]]
 - [[useState（React 状态 Hook）]]
+- [[useReducer（React Reducer Hook）]]
+- [[Reducer（状态归约函数）]]
 - [[DOM（文档对象模型）]]
 - [[JSX（JavaScript XML）]]
 - [[TSX（TypeScript XML）]]
 - [[Next.js（Next 应用框架）]]
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]]
 - [[为什么 React 不推荐手动操作 DOM]]
+- [[为什么 React 不能直接修改 state]]
+- [[为什么复杂 React 状态适合 useReducer]]

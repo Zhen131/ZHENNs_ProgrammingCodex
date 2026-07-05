@@ -2,7 +2,7 @@
 type: 技术卡片
 status: 草稿
 tags: [类型/技术卡片, 领域/Web与网络, 语言/JavaScript, 层级/基础]
-aliases: [State, React State, 状态, React 状态, 页面状态, 组件状态]
+aliases: [State, React State, 状态, React 状态, 页面状态, 组件状态, 业务状态, UI 状态]
 created: 2026-07-05
 updated: 2026-07-05
 ---
@@ -48,12 +48,15 @@ State 可以先理解成“页面打开期间 React 暂时保存的数据”。�
 
 刷新页面后 state 丢失，不一定是 bug；如果当前目标只是验证输入、校验、入账、计算、展示链路，临时 state 是可以接受的阶段性方案。永久保存要交给后续的 IndexedDB 或其他存储方案。
 
+React State 不能只按“是不是数据”判断，还要看修改方式。简单 UI 状态可以用 [[useState（React 状态 Hook）]] 管理；如果同一份核心业务状态会被很多 action 修改，就更适合交给 [[useReducer（React Reducer Hook）]] 和 [[Reducer（状态归约函数）]] 统一处理。
+
 ## 典型使用场景
 
 - 表单输入影响页面预览。
 - 新增交易后刷新交易列表。
 - 事实数据变化后重新计算并展示 [[Derived Data（派生数据）]]。
 - 在组件里调用 [[useState（React 状态 Hook）]] 创建和更新状态。
+- 在复杂业务状态里用 [[useReducer（React Reducer Hook）]] 集中处理新增、删除、更新、重置等操作。
 
 ## 局限性
 
@@ -61,19 +64,29 @@ State 不是数据库，也不是全局业务大脑。组件里堆太多状态�
 
 页面可以收集输入、调用业务逻辑，然后用新的业务数据更新 state；校验、计算和数据持久化不应该全部塞进组件。
 
+也不要直接修改 state 对象内部字段。直接 `push`、直接改属性，容易让 React 无法清楚识别状态更新；应该通过 [[useState（React 状态 Hook）]] 的 setter 或 [[useReducer（React Reducer Hook）]] 的 `dispatch(action)` 提交新状态。
+
 ## 和其他概念的关系
 
 - [[React（React UI 库）]] 通过 state 把“数据变了”转成“界面重新显示”。
 - [[useState（React 状态 Hook）]] 是创建组件 state 的常见 Hook。
+- [[useReducer（React Reducer Hook）]] 适合统一管理复杂 state 的修改规则。
+- [[Reducer（状态归约函数）]] 描述旧 state 和 action 如何生成新 state。
 - [[DOM（文档对象模型）]] 是 React 最终要更新的浏览器页面结构。
 - [[Derived Data（派生数据）]] 解释哪些结果应该由 state 中的事实数据计算出来。
+- [[为什么 React 不能直接修改 state]] 是理解 state 更新边界的问题入口。
+- [[为什么复杂 React 状态适合 useReducer]] 是理解复杂 state 管理的问题入口。
 - [[为什么前端页面不能长期依赖写死数据]] 解释为什么页面应该从真实 state 或数据源读取数据。
 
 ## 关联
 
 - [[React（React UI 库）]]
 - [[useState（React 状态 Hook）]]
+- [[useReducer（React Reducer Hook）]]
+- [[Reducer（状态归约函数）]]
 - [[DOM（文档对象模型）]]
 - [[Derived Data（派生数据）]]
+- [[为什么 React 不能直接修改 state]]
+- [[为什么复杂 React 状态适合 useReducer]]
 - [[为什么 React 不推荐手动操作 DOM]]
 - [[为什么前端页面不能长期依赖写死数据]]

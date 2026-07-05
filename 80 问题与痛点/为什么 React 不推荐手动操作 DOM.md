@@ -43,12 +43,15 @@ avgCost.innerText = "$60000";
 
 开发者主要维护数据状态，而不是到处手动找 DOM 节点。比如新增一条业务记录后，先更新事实数据或页面 state，再由页面根据新数据和计算出的 [[Derived Data（派生数据）]] 重新显示。
 
+简单状态可以通过 [[useState（React 状态 Hook）]] 更新；复杂业务状态可以通过 [[useReducer（React Reducer Hook）]] 把修改规则集中起来。关键不是具体用哪个 Hook，而是不要绕过 React 的状态更新入口偷偷改数据或手动改 DOM。
+
 ## 相关技术
 
 - [[DOM（文档对象模型）]]
 - [[React（React UI 库）]]
 - [[React State（React 状态）]]
 - [[useState（React 状态 Hook）]]
+- [[useReducer（React Reducer Hook）]]
 - [[Derived Data（派生数据）]]
 
 ## 我的理解
@@ -58,4 +61,6 @@ React 不是说 DOM 不重要，而是把“我手动改页面”升级成“我
 ## 关联
 
 - [[为什么前端页面不能长期依赖写死数据]]
+- [[为什么 React 不能直接修改 state]]
+- [[为什么复杂 React 状态适合 useReducer]]
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]]
