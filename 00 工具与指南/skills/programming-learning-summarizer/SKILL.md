@@ -24,7 +24,7 @@ The goal is to produce a clear learning packet that can later be imported into `
 3. Extract candidate cards.
    - Technology card candidates: stable concepts worth reusing.
    - Problem card candidates: questions that explain why the technology matters.
-   - Project learning record candidate: the concrete event where this was learned.
+   - Project context snippets: concrete file paths, symptoms, or code observations that should be embedded inside the relevant cards.
 
 4. Explain with Chinese logic and English terms.
    - Use Chinese for reasoning and learning reflection.
@@ -70,9 +70,9 @@ The goal is to produce a clear learning packet that can later be imported into `
 
 - `English Term（中文翻译）`
 
-## 6. 项目学习记录候选
+## 6. 项目语境
 
-- `YY_MM_DD 项目名 - 学到的主题`
+- 可以写进技术卡片或问题卡片正文的项目、文件、bug、命令或代码观察。
 
 ## 7. 建议入库动作
 
@@ -89,5 +89,5 @@ The goal is to produce a clear learning packet that can later be imported into `
 
 - Do not write directly into `编程宝典` unless the user explicitly asks.
 - Prefer concrete code observations over generic textbook explanations.
+- Do not propose standalone aggregation notes; project context should be embedded in technical/problem cards.
 - Keep the packet compact enough to import, but complete enough that another AI can perform入库 without rereading the whole project.
-

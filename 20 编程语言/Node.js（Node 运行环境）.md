@@ -65,10 +65,6 @@ Node.js 不是一门新语言，也不是 [[node_modules（依赖实体目录）
 - [[package.json（项目清单）]] 记录 Node/JavaScript 项目的命令和依赖。
 - [[node_modules（依赖实体目录）]] 是 npm 下载依赖后的本地目录，不是 Node.js 本体。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：账本项目需要 Node.js 来运行 Next.js 开发服务器、Vitest 测试和 npm scripts。
-
 ## 关联
 
 - [[JavaScript Runtime（JavaScript 运行时）]]

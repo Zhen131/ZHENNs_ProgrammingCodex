@@ -30,6 +30,8 @@ updated: 2026-06-29
 
 在 [[React（React UI 库）]] 中，component 可以先粗略理解成“返回界面结构的函数”。它通常用 [[JSX（JavaScript XML）]] 或 [[TSX（TypeScript XML）]] 描述界面长什么样，用 JavaScript / [[TypeScript（类型化 JavaScript）]] 写行为逻辑。
 
+用 Lego（乐高）类比，component 就是一块界面 piece。它可以是一个很小的按钮，也可以是由输入框、按钮和提示文字组合出来的表单。[[CSS（层叠样式表）]] / [[Tailwind CSS（Tailwind 样式工具）]] 决定它的颜色、间距和摆放，[[Next.js（Next 应用框架）]] 则可能把某些 component 放进页面、布局或路由规则里。
+
 ## 典型使用场景
 
 - `TradeForm`：新增或编辑交易。
@@ -46,15 +48,14 @@ updated: 2026-06-29
 
 - [[React（React UI 库）]] 以 component 作为核心组织方式。
 - [[Next.js（Next 应用框架）]] 会把某些 component 赋予页面或布局角色。
+- [[JSX（JavaScript XML）]] / [[TSX（TypeScript XML）]] 常用来描述 component 的结构。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了组件为什么只是前端分层中的一层。
-
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习中，component 被类比成乐高小零件。
 
 ## 关联
 
 - [[React（React UI 库）]]
+- [[JSX（JavaScript XML）]]
 - [[TSX（TypeScript XML）]]
+- [[CSS（层叠样式表）]]
+- [[Tailwind CSS（Tailwind 样式工具）]]
 - [[Next.js App Router（Next 应用路由）]]
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]

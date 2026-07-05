@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/软件工程, 领域/Web与网络, 语言/JavaScript, 层级/基础]
 aliases: [JavaScript 项目结构, TypeScript 项目结构, 前端项目结构, 项目根目录, 工程骨架]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-01
 ---
 
 # JavaScript Project Structure（JavaScript 项目结构）
@@ -35,7 +35,7 @@ updated: 2026-06-29
 第一层：优先看。
 
 - `README.md`：项目做什么、怎么启动。
-- [[package.json（项目清单）]]：项目命令、依赖和工具链。
+- [[package.json（项目清单）]]：项目说明书，记录命令、依赖和工具链。
 - `src/`：通常是业务源码主线。
 
 第二层：知道用途，遇到对应问题再深入。
@@ -71,14 +71,10 @@ updated: 2026-06-29
 
 - [[Node.js（Node 运行环境）]] 提供运行开发工具的环境。
 - [[npm（Node 包管理器）]] 通过 package.json 运行项目命令。
+- [[npm scripts（npm 脚本）]] 解释 `npm run dev` 这类命令为什么能调用本地工具。
 - [[Dependency（依赖）]] 帮助判断 package 在项目里的角色。
 - [[Next.js（Next 应用框架）]] 会通过 `src/app/`、`page.tsx`、`layout.tsx`、`.next/` 等约定影响项目结构。
 - [[为什么读 JavaScript 项目要先识别工程骨架]] 是对应问题入口。
-
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：这次学习的主线就是从账本项目根目录识别哪些该看、哪些知道即可、哪些基本别读。
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习进一步区分了 React component、TSX、Tailwind、Next.js 约定和 `.next/` 生成物。
 
 ## 进一步理解
 
@@ -88,6 +84,7 @@ updated: 2026-06-29
 ## 关联
 
 - [[package.json（项目清单）]]
+- [[npm scripts（npm 脚本）]]
 - [[node_modules（依赖实体目录）]]
 - [[Dependency（依赖）]]
 - [[Next.js（Next 应用框架）]]

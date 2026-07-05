@@ -41,6 +41,8 @@ Tailwind 最后仍然会生成 CSS。
 
 在 React 项目里，Tailwind 常和 [[TSX（TypeScript XML）]] 的 `className` 一起出现。
 
+在 Lego（乐高）类比里，Tailwind 像一套预制装饰件和颜色贴纸。开发者不用每次重新写一份 CSS 规则，而是在 `className` 里用 `p-4`、`text-white`、`bg-black` 这类 utility class 快速给 component 加间距、颜色和背景。
+
 ## 典型使用场景
 
 - 快速设置 padding、margin、颜色、背景。
@@ -55,11 +57,8 @@ Tailwind 会让 `className` 变长，初学者也可能被大量缩写淹没。�
 
 - [[CSS（层叠样式表）]] 是 Tailwind 的基础。
 - [[React（React UI 库）]] component 常通过 `className` 使用 Tailwind。
+- [[TSX（TypeScript XML）]] 是 Tailwind className 经常出现的位置。
 - [[Tailwind 和 CSS 是一回事吗]] 是对应问题入口。
-
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 Tailwind 暂时理解为“用 className 快速写 CSS 样式的工具”。
 
 ## 关联
 

@@ -28,6 +28,8 @@ JSX/TSX 看起来像把 HTML 写进 JavaScript 或 TypeScript。初学者会自�
 - 这个组件的交互逻辑。
 - 这个组件的类型约束。
 
+用 Lego（乐高）类比，JSX/TSX 更像零件的结构说明：这块 component 里放了哪些子零件、文字和输入框。JavaScript / TypeScript 处理行为和数据，CSS / Tailwind 处理装饰和摆放，Next.js 处理这些零件如何进入完整应用。
+
 ## 相关技术
 
 - [[JSX（JavaScript XML）]]
@@ -35,6 +37,9 @@ JSX/TSX 看起来像把 HTML 写进 JavaScript 或 TypeScript。初学者会自�
 - [[React（React UI 库）]]
 - [[UI Component（UI 组件）]]
 - [[TypeScript（类型化 JavaScript）]]
+- [[CSS（层叠样式表）]]
+- [[Tailwind CSS（Tailwind 样式工具）]]
+- [[Next.js（Next 应用框架）]]
 
 ## 我的理解
 
@@ -42,6 +47,5 @@ JSX/TSX 看起来像把 HTML 写进 JavaScript 或 TypeScript。初学者会自�
 
 ## 关联
 
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]
 - [[TSX 和 Next.js 是一回事吗]]
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]]

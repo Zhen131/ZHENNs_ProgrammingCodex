@@ -33,6 +33,8 @@ JSX 是语法层，不是应用框架。它通常和 [[React（React UI 库）]]
 
 如果项目使用 TypeScript，那么常见形式就是 [[TSX（TypeScript XML）]]。
 
+在 Lego（乐高）类比里，JSX 更像零件结构图：这块 component 里有哪些文字、按钮、输入框和子 component。它描述“长什么样”，但不负责规定整个应用的路由和构建规则。
+
 ## 典型使用场景
 
 - 在 React component 中返回按钮、表单、列表、表格。
@@ -47,11 +49,8 @@ JSX 不是浏览器原生直接执行的 HTML。它需要被构建工具转换�
 
 - [[TSX（TypeScript XML）]] 是 TypeScript + JSX。
 - [[React（React UI 库）]] 常用 JSX 描述 component。
+- [[UI Component（UI 组件）]] 是 JSX 通常要描述的界面零件。
 - [[TSX 和 Next.js 是一回事吗]] 解释了语法和框架的区别。
-
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 JSX/TSX 理解为“在代码里描述界面长什么样的语法”。
 
 ## 关联
 

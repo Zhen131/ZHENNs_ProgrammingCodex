@@ -30,7 +30,6 @@ Before editing, read:
 3. Classify the material.
    - Stable concept: create or update a technical card.
    - Pain point: create or update a problem card.
-   - Concrete project event: create or update a project learning record.
    - Immature material: place in `90 素材与临时笔记`.
 
 4. Decide create vs update.
@@ -52,8 +51,8 @@ Before editing, read:
 7. Verify direct graph links.
    - Technical cards should link to related technical cards directly.
    - Problem cards should link to the technical cards that solve the pain point.
-   - Project records should link to the technical cards and problem cards they produced.
-   - Do not create extra routing files as a navigation layer.
+   - Project context should appear inside the relevant technical/problem cards, not as a separate aggregation note.
+   - Do not create extra routing files or aggregation notes as a navigation layer.
 
 8. Verify.
    - Confirm new files are in the right folder.
@@ -69,7 +68,6 @@ Before editing, read:
 - `40 Web与网络`: browser, frontend/backend, HTTP, TCP/IP, web frameworks.
 - `50 数据与存储`: databases, cache, indexes, transactions, storage models.
 - `60 AI与编程工具`: LLM, AI coding, MCP, NLP, Embedding, Tokenization, developer tools.
-- `70 项目学习记录`: concrete learning events from projects.
 - `80 问题与痛点`: why/how problem cards.
 - `90 素材与临时笔记`: raw material not ready to become stable knowledge.
 

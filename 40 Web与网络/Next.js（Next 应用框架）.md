@@ -38,6 +38,8 @@ React 负责造和拼 UI 零件。
 Next.js 负责规定这些零件如何变成完整网站应用。
 ```
 
+用 Lego（乐高）类比，Next.js 像说明书、底板和施工规则：[[React（React UI 库）]] / [[UI Component（UI 组件）]] 提供零件，[[JSX（JavaScript XML）]] / [[TSX（TypeScript XML）]] 描述零件结构，[[CSS（层叠样式表）]] / [[Tailwind CSS（Tailwind 样式工具）]] 处理零件外观，而 Next.js 决定这些零件放在哪个页面、用什么布局、通过什么路由访问、如何开发和构建。
+
 ## 核心机制
 
 Next.js 是 [[Framework（框架）]]。它既有代码实体，也有规则和运行流程：
@@ -61,18 +63,15 @@ Next.js 不是 [[TSX（TypeScript XML）]]，也不是主要负责“造 UI 零�
 ## 和其他概念的关系
 
 - [[React（React UI 库）]] 是 Next.js 的 UI 基础。
+- [[UI Component（UI 组件）]] 是 Next.js 组织页面和布局时使用的界面零件。
 - [[Next.js App Router（Next 应用路由）]] 解释 `src/app/page.tsx` 和 `layout.tsx` 的特殊意义。
 - [[JavaScript Project Structure（JavaScript 项目结构）]] 帮助判断 `.next/`、`next.config.mjs`、`node_modules/next/` 的位置。
 - [[React 和 Next.js 有什么区别]] 是理解 Next.js 边界的问题入口。
 
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 Next.js 暂时理解为“说明书 + 底板 + 房间编号规则 + 交付流程”。
-- [[26_06_29 账本项目 - 理解 Node.js、npm 与 node_modules]]：上一条学习记录中，`.next/` 和 `next.config.mjs` 还是只知道用途、待深入理解的内容。
-
 ## 关联
 
 - [[React（React UI 库）]]
+- [[UI Component（UI 组件）]]
 - [[Framework（框架）]]
 - [[Next.js App Router（Next 应用路由）]]
 - [[TSX 和 Next.js 是一回事吗]]

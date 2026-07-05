@@ -30,7 +30,7 @@ CSS 负责表达界面的视觉层：
 - 边框。
 - 响应式变化。
 
-如果 [[React（React UI 库）]] component 是界面零件，那么 CSS 可以理解成给零件上颜色、定尺寸、摆位置的规则。
+如果 [[React（React UI 库）]] component 是界面零件，那么 CSS 可以理解成给零件上颜色、贴装饰、定尺寸、摆位置的规则。它不决定这个零件点击后做什么，也不决定这个零件属于哪个页面；这些分别更接近 JavaScript / [[TypeScript（类型化 JavaScript）]] 和 [[Next.js（Next 应用框架）]] 的职责。
 
 ## 核心机制
 
@@ -51,15 +51,13 @@ CSS 规则分散、命名和层叠关系复杂时，样式也会变得难维护�
 
 - [[Tailwind CSS（Tailwind 样式工具）]] 是基于 CSS 的样式工具。
 - [[React（React UI 库）]] 负责 UI component，CSS 负责视觉样式。
+- [[TypeScript（类型化 JavaScript）]] 负责逻辑和类型，不负责视觉样式。
 - [[Tailwind 和 CSS 是一回事吗]] 解释了语言和工具的区别。
-
-## 在项目中的表现
-
-- [[26_06_29 账本项目 - 建立 React 和 Next.js 的基础心智模型]]：这次学习把 CSS/Tailwind 放在“控制界面样式”的层级。
 
 ## 关联
 
 - [[Tailwind CSS（Tailwind 样式工具）]]
 - [[React（React UI 库）]]
+- [[TypeScript（类型化 JavaScript）]]
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]]
 - [[Tailwind 和 CSS 是一回事吗]]
