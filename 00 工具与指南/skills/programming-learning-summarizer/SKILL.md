@@ -25,6 +25,7 @@ The goal is to produce a clear learning packet that can later be imported into `
    - Technology card candidates: stable concepts worth reusing.
    - Problem card candidates: questions that explain why the technology matters.
    - Project context snippets: concrete file paths, symptoms, or code observations that should be embedded inside the relevant cards.
+   - Separate reusable concepts from project-only names, variables, files, services, and domain objects.
 
 4. Explain with Chinese logic and English terms.
    - Use Chinese for reasoning and learning reflection.
@@ -79,6 +80,7 @@ The goal is to produce a clear learning packet that can later be imported into `
 - 新建：
 - 更新：
 - 暂存到 `90 素材与临时笔记`：
+- 不建议单独成卡：
 
 ## 8. 待确认
 
@@ -90,4 +92,5 @@ The goal is to produce a clear learning packet that can later be imported into `
 - Do not write directly into `编程宝典` unless the user explicitly asks.
 - Prefer concrete code observations over generic textbook explanations.
 - Do not propose standalone aggregation notes; project context should be embedded in technical/problem cards.
+- Do not treat project-only names as technology card candidates unless they represent a cross-project reusable concept.
 - Keep the packet compact enough to import, but complete enough that another AI can perform入库 without rereading the whole project.

@@ -15,6 +15,7 @@ Before editing, read:
 
 - `AGENTS.md`
 - `00 工具与指南/编程知识入库指南.md`
+- `00 工具与指南/编程知识入库审查指南.md`
 
 ## Workflow
 
@@ -54,10 +55,19 @@ Before editing, read:
    - Project context should appear inside the relevant technical/problem cards, not as a separate aggregation note.
    - Do not create extra routing files or aggregation notes as a navigation layer.
 
-8. Verify.
+8. Run post-ingest review.
+   - Use `00 工具与指南/编程知识入库审查指南.md`.
+   - Classify findings as P0/P1/P2/P3/P4.
+   - P0 and P1 must be fixed before commit or completion.
+   - Check whether every new card is cross-project reusable, independently useful, necessary, and directly linked.
+   - Delete, merge, rename, generalize, or move to `90 素材与临时笔记` when a card does not deserve to exist as a standalone node.
+   - Project-specific names, variables, files, services, and domain objects should stay as examples unless they represent a reusable concept.
+
+9. Verify.
    - Confirm new files are in the right folder.
    - Confirm links are not empty placeholders.
    - Confirm no duplicate note was created.
+   - Confirm no unresolved P0/P1 review findings remain.
    - Report changed files and any uncertain decisions.
 
 ## Placement Rules
@@ -78,4 +88,7 @@ After入库, report:
 - Created files
 - Updated files
 - Main links added
+- Post-ingest review result
+- P0/P1/P2/P3/P4 findings and actions taken
+- Why the remaining new cards deserve to exist
 - Items left as `待确认`
