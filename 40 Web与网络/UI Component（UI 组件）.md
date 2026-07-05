@@ -32,7 +32,7 @@ updated: 2026-07-05
 
 用 Lego（乐高）类比，component 就是一块界面 piece。它可以是一个很小的按钮，也可以是由输入框、按钮和提示文字组合出来的表单。[[CSS（层叠样式表）]] / [[Tailwind CSS（Tailwind 样式工具）]] 决定它的颜色、间距和摆放，[[Next.js（Next 应用框架）]] 则可能把某些 component 放进页面、布局或路由规则里。
 
-组件可以接收 props，也可以依赖 [[React State（React 状态）]]。但这不代表组件应该承担所有业务逻辑。账本项目里，`TradeForm` 可以收集用户输入，`TradeList` 可以展示 `ledgerData.trades`，但交易校验、持仓计算和盈亏计算应该交给更明确的 service、validator 或 calculator。
+组件可以接收 props，也可以依赖 [[React State（React 状态）]]。但这不代表组件应该承担所有业务逻辑。比如表单组件可以收集用户输入，列表组件可以展示传入的数据，但校验、计算和持久化应该交给更明确的 service、validator 或 calculator。
 
 ## 典型使用场景
 

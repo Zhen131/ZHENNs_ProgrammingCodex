@@ -15,7 +15,7 @@ updated: 2026-07-05
 
 ## 背景：它出现前的问题
 
-React 页面需要记住一些会影响显示的数据，例如计数器数值、表单输入、当前账本数据。如果这些数据只存在普通变量里，React 不一定知道页面需要重新渲染。
+React 页面需要记住一些会影响显示的数据，例如计数器数值、表单输入、当前筛选条件或业务数据。如果这些数据只存在普通变量里，React 不一定知道页面需要重新渲染。
 
 ## 它解决了什么
 
@@ -35,26 +35,26 @@ const [count, setCount] = useState(0);
 
 ## 核心机制
 
-在账本项目里，更关键的例子是：
+在真实页面里，更常见的例子是：
 
 ```tsx
-const [ledgerData, setLedgerData] = useState<LedgerData>(initialLedgerData);
+const [draft, setDraft] = useState<FormDraft>(initialDraft);
 ```
 
 这段代码表达的是：
 
-- `ledgerData` 是当前页面里的临时账本数据。
-- `setLedgerData` 是替换账本状态的方法。
-- `initialLedgerData` 是页面刚打开时的初始账本。
-- `<LedgerData>` 是 TypeScript 给 state 标注的数据形状。
+- `draft` 是当前页面里的表单草稿。
+- `setDraft` 是修改表单草稿的方法。
+- `initialDraft` 是页面刚打开时的初始值。
+- `<FormDraft>` 是 TypeScript 给 state 标注的数据形状。
 
-新增交易时，页面不应该手动改一堆 DOM，而应该拿到新的 [[LedgerData（账本数据对象）]] 后调用 `setLedgerData(newLedgerData)`，让 [[React（React UI 库）]] 根据新 state 更新界面。
+用户输入改变时，页面不应该手动改一堆 DOM，而应该调用 `setDraft(nextDraft)`，让 [[React（React UI 库）]] 根据新 state 更新界面。
 
 ## 典型使用场景
 
 - 保存当前表单草稿。
 - 保存当前筛选条件。
-- 保存 `ledgerData` 这类页面级临时数据。
+- 保存页面级临时业务数据。
 - 让用户操作触发页面重新渲染。
 
 ## 局限性
@@ -67,13 +67,11 @@ useState 只负责组件状态，不负责永久存储。刷新页面后，存�
 
 - [[React State（React 状态）]] 是 useState 创建和维护的核心对象。
 - [[TypeScript（类型化 JavaScript）]] 可以给 useState 标注状态类型。
-- [[LedgerData（账本数据对象）]] 是账本项目里适合作为页面 state 的业务数据对象。
-- [[为什么账本页面不能继续使用写死数据]] 是理解 `setLedgerData` 价值的问题入口。
+- [[为什么前端页面不能长期依赖写死数据]] 是理解页面 state 价值的问题入口。
 
 ## 关联
 
 - [[React State（React 状态）]]
 - [[React（React UI 库）]]
 - [[TypeScript（类型化 JavaScript）]]
-- [[LedgerData（账本数据对象）]]
-- [[为什么账本页面不能继续使用写死数据]]
+- [[为什么前端页面不能长期依赖写死数据]]
