@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/Web与网络, 语言/JavaScript, 层级/基础]
 aliases: [Component, 组件, UI 组件, React Component, React 组件]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-05
 ---
 
 # UI Component（UI 组件）
@@ -32,6 +32,8 @@ updated: 2026-06-29
 
 用 Lego（乐高）类比，component 就是一块界面 piece。它可以是一个很小的按钮，也可以是由输入框、按钮和提示文字组合出来的表单。[[CSS（层叠样式表）]] / [[Tailwind CSS（Tailwind 样式工具）]] 决定它的颜色、间距和摆放，[[Next.js（Next 应用框架）]] 则可能把某些 component 放进页面、布局或路由规则里。
 
+组件可以接收 props，也可以依赖 [[React State（React 状态）]]。但这不代表组件应该承担所有业务逻辑。账本项目里，`TradeForm` 可以收集用户输入，`TradeList` 可以展示 `ledgerData.trades`，但交易校验、持仓计算和盈亏计算应该交给更明确的 service、validator 或 calculator。
+
 ## 典型使用场景
 
 - `TradeForm`：新增或编辑交易。
@@ -47,6 +49,7 @@ updated: 2026-06-29
 ## 和其他概念的关系
 
 - [[React（React UI 库）]] 以 component 作为核心组织方式。
+- [[React State（React 状态）]] 会影响 component 如何重新显示。
 - [[Next.js（Next 应用框架）]] 会把某些 component 赋予页面或布局角色。
 - [[JSX（JavaScript XML）]] / [[TSX（TypeScript XML）]] 常用来描述 component 的结构。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了组件为什么只是前端分层中的一层。
@@ -54,6 +57,7 @@ updated: 2026-06-29
 ## 关联
 
 - [[React（React UI 库）]]
+- [[React State（React 状态）]]
 - [[JSX（JavaScript XML）]]
 - [[TSX（TypeScript XML）]]
 - [[CSS（层叠样式表）]]

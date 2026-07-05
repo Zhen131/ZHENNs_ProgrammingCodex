@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/编程语言, 语言/JavaScript, 层级/基础]
 aliases: [Runtime Environment, 运行环境, JavaScript 运行环境, JS Runtime]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-05
 ---
 
 # JavaScript Runtime（JavaScript 运行时）
@@ -24,7 +24,7 @@ updated: 2026-06-29
 运行时这个概念帮助区分两件事：
 
 - 语言本身：变量、函数、对象、模块等语法和语义。
-- 宿主环境：浏览器提供 `window`、`document`、`DOM`，Node.js 提供文件系统、路径、环境变量、命令行、服务器等能力。
+- 宿主环境：浏览器提供 `window`、`document`、[[DOM（文档对象模型）]]，Node.js 提供文件系统、路径、环境变量、命令行、服务器等能力。
 
 理解这层区别后，就不会把浏览器里的 JavaScript 和 Node.js 里的 JavaScript 误认为完全一样。
 
@@ -36,7 +36,7 @@ updated: 2026-06-29
 
 - `window`
 - `document`
-- DOM
+- [[DOM（文档对象模型）]]
 - 页面事件
 - 浏览器本地存储
 
@@ -64,6 +64,7 @@ Runtime 不是业务代码，也不是 package。理解 runtime 只能说明代�
 ## 和其他概念的关系
 
 - [[Node.js（Node 运行环境）]] 是 JavaScript 在浏览器外运行的典型 runtime。
+- [[DOM（文档对象模型）]] 是浏览器 runtime 提供给 JavaScript 的页面结构能力。
 - [[V8（JavaScript 引擎）]] 是 Node.js 使用的 JavaScript engine。
 - [[JavaScript Project Structure（JavaScript 项目结构）]] 会把 runtime、包管理、业务源码放在同一个项目根目录中。
 - [[为什么读 JavaScript 项目要先识别工程骨架]] 解释了为什么不能把所有文件都当作源码读。
@@ -71,6 +72,7 @@ Runtime 不是业务代码，也不是 package。理解 runtime 只能说明代�
 ## 关联
 
 - [[Node.js（Node 运行环境）]]
+- [[DOM（文档对象模型）]]
 - [[V8（JavaScript 引擎）]]
 - [[package.json（项目清单）]]
 - [[为什么读 JavaScript 项目要先识别工程骨架]]

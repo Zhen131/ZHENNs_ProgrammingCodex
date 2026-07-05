@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/编程语言, 语言/TypeScript, 语言/JavaScript, 层级/基础]
 aliases: [TypeScript, TS, 类型化 JavaScript, Typed JavaScript]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-05
 ---
 
 # TypeScript（类型化 JavaScript）
@@ -17,7 +17,7 @@ updated: 2026-06-29
 
 JavaScript 很灵活，但项目变大后，开发者容易看不清对象有哪些字段、函数需要什么参数、某个值会不会缺失。读代码时，如果没有类型信息，很多数据结构只能靠猜。
 
-在账本这类项目里，`Trade`、`TradeDraft`、`Position`、`PriceSnapshot`、`LedgerData` 这类对象如果没有明确类型，就很容易把字段含义和数据流看乱。
+在账本这类项目里，`Trade`、`TradeDraft`、`Position`、`PriceSnapshot`、[[LedgerData（账本数据对象）]] 这类对象如果没有明确类型，就很容易把字段含义和数据流看乱。
 
 ## 它解决了什么
 
@@ -40,6 +40,7 @@ TypeScript 可以粗略理解成 JavaScript 的增强版。它保留 JavaScript 
 ## 典型使用场景
 
 - 给业务对象建模，例如交易、持仓、价格快照。
+- 给 [[React State（React 状态）]] 标注业务数据形状，例如 `useState<LedgerData>(initialLedgerData)`。
 - 给 React component 的 props 标注类型。
 - 在重构时提前发现字段名或参数类型错误。
 - 与编辑器配合，降低读代码时的猜测成本。
@@ -53,6 +54,8 @@ TypeScript 主要在开发阶段帮助理解和检查代码。它不能替代运
 - [[JavaScript Runtime（JavaScript 运行时）]] 解释代码最终运行在哪些环境里。
 - [[TSX（TypeScript XML）]] 是 TypeScript 和 JSX 结合后常用于写 React 组件的文件语法。
 - [[React（React UI 库）]] 项目常用 TypeScript 来约束 component 的数据结构。
+- [[LedgerData（账本数据对象）]] 是账本项目里需要 TypeScript 明确建模的业务对象。
+- [[useState（React 状态 Hook）]] 可以用 TypeScript 泛型标注 state 类型。
 - [[UI Component（UI 组件）]] 是 TypeScript 在 React 场景里经常描述的数据和行为对象。
 - [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了 TypeScript 在前端分层中的位置。
 
@@ -60,5 +63,7 @@ TypeScript 主要在开发阶段帮助理解和检查代码。它不能替代运
 
 - [[TSX（TypeScript XML）]]
 - [[React（React UI 库）]]
+- [[useState（React 状态 Hook）]]
+- [[LedgerData（账本数据对象）]]
 - [[UI Component（UI 组件）]]
 - [[JavaScript Runtime（JavaScript 运行时）]]
