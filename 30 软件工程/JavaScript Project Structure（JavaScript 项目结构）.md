@@ -4,7 +4,7 @@ status: 草稿
 tags: [类型/技术卡片, 领域/软件工程, 领域/Web与网络, 语言/JavaScript, 层级/基础]
 aliases: [JavaScript 项目结构, TypeScript 项目结构, 前端项目结构, 项目根目录, 工程骨架]
 created: 2026-06-29
-updated: 2026-07-01
+updated: 2026-07-18
 ---
 
 # JavaScript Project Structure（JavaScript 项目结构）
@@ -80,6 +80,7 @@ updated: 2026-07-01
 
 - [[Next.js App Router（Next 应用路由）]]：`src/app/page.tsx` 和 `src/app/layout.tsx` 不是普通文件名，而是 Next.js 通过目录和文件名约定识别应用结构的例子。
 - [[为什么 .next 不用读]]：`.next/` 是框架加工项目后的产物和缓存，不是业务源码入口。
+- [[Git（分布式版本控制系统）]]：Git 跟踪项目文件的版本变化，`.git/` 则保存仓库的内部历史与引用。
 
 ## 关联
 
@@ -89,3 +90,4 @@ updated: 2026-07-01
 - [[Dependency（依赖）]]
 - [[Next.js（Next 应用框架）]]
 - [[为什么读 JavaScript 项目要先识别工程骨架]]
+- [[Git（分布式版本控制系统）]]
