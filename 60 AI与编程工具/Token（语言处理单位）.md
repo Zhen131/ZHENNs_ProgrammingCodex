@@ -4,7 +4,7 @@ status: 已整理
 tags: [类型/技术卡片, 领域/AI, 层级/基础]
 aliases: [Token, 语言处理单位, 输入 Token, 输出 Token, Input Token, Output Token, Reasoning Token]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-09-25
 ---
 
 # Token（语言处理单位）
@@ -51,3 +51,4 @@ Token 数可以近似表示模型处理了多少符号序列，适合观察上�
 - [[Context Window（上下文窗口）]]：限制一次模型调用可处理的 token 范围。
 - [[为什么 Token 不能直接等同于 MB]]：区分语言序列计量与字节计量。
 - [[为什么 AI Agent 比普通聊天消耗更多 Token]]：解释多轮工具工作流如何累积 token 用量。
+- [[Byte-Pair Encoding（字节对编码，BPE）]]：主流的子词切分算法，解释了为什么同一个词可能被切成多个 token。

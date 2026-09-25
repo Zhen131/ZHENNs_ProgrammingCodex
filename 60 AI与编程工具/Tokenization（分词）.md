@@ -4,7 +4,7 @@ status: 已整理
 tags: [类型/技术卡片, 领域/AI, 层级/基础]
 aliases: [Tokenization, 分词, Tokenizer]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-09-25
 ---
 
 # Tokenization（分词）
@@ -33,6 +33,26 @@ token ID 序列
 
 切分结果依赖具体 tokenizer。相同文本交给不同模型，token 数可能不同；空格、标点、大小写、中文、emoji 和代码符号也都会影响结果。
 
+## 切分粒度：三种思路和它们的权衡
+
+Tokenization 的核心权衡是**词表大小 vs 处理效率**，具体分三种粒度：
+
+- **Character-based（字符级）**：按单个字符切。词表极小、不会遇到没见过的字符，但一句话被拆成的 token 数量会暴涨，单个字符也几乎没有语义。
+- **Word-level（词级）**：按完整单词/空格切，比如 NLTK 的 `word_tokenize`。直观好懂，但词表要非常大才能覆盖所有词形，遇到没见过的词只能标成 `[UNK]`（未知词）。
+- **Subword（子词级）**：现代 LLM 的主流方案，在"字符"和"完整单词"之间找平衡，词表大小可控，还能把没见过的词拆成认识的子词片段。代表算法是 [[Byte-Pair Encoding（字节对编码，BPE）]] 和 [[WordPiece]]。
+
+## 特殊 Token（Special Tokens）
+
+给 Transformer 类模型用的分词器，除了普通的词/子词 token，词表里通常还会保留几个特殊符号，用来给模型传递结构信号：
+
+- `[UNK]`：未知词，编不出来时的兜底标记。
+- `[CLS]`：放在句首，代表"整句话"的语义（分类任务常用）。
+- `[SEP]`：分隔两个句子（比如问答任务里问题和答案之间）。
+- `[PAD]`：补齐用，把一批长短不一的句子填到统一长度。
+- `[MASK]`：训练时故意挖空某个词让模型去猜（BERT 一类模型的训练方式）。
+
+上面这组是 BERT 系分词器的写法；GPT 系模型用的特殊 token 名字不同，例如 `<|endoftext|>`，但作用类似。
+
 ## 它解决了什么
 
 - 把任意文本转为有限词表中的数值 ID。
@@ -45,8 +65,20 @@ token ID 序列
 - 不同语言的 token 效率可能不同，不能用统一“字数换算率”精确估算。
 - Tokenization 只是输入表示步骤，不代表模型已经理解文本。
 
+## 进一步理解
+
+- [[Byte-Pair Encoding（字节对编码，BPE）]]、[[WordPiece]]：两种主流的 subword 训练算法，都是从字符逐步合并出词表，区别在于挑选"合并哪一对"时的打分方式。
+- [[NLTK（自然语言工具包）]]、[[Hugging Face]]：分别代表传统规则/统计式分词工具和现代子词分词工具链，可以对照着理解分词方法这些年的演进。
+- [[N-Gram（N元语法）]]：分词之后，对连续 N 个 token 做统计的经典方法，是 Transformer 出现前的统计语言模型思路。
+
 ## 关联
 
 - [[Token（语言处理单位）]]：Tokenization 的直接产物。
 - [[Context Window（上下文窗口）]]：切分后的 token 数决定文本占用多少上下文。
 - [[为什么 Token 不能直接等同于 MB]]：同样的字节大小经过不同 tokenizer 后可能产生不同 token 数。
+- [[Byte-Pair Encoding（字节对编码，BPE）]]
+- [[WordPiece]]
+- [[NLTK（自然语言工具包）]]
+- [[Hugging Face]]
+- [[N-Gram（N元语法）]]
+- [[Deep Learning（深度学习）]]：神经网络只接受数值输入，分词是文本进入深度网络前的第一步。
