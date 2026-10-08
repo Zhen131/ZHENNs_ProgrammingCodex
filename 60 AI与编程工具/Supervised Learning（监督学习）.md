@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Supervised Learning, 监督学习, 有监督学习]
 created: 2026-09-23
 updated: 2026-10-08

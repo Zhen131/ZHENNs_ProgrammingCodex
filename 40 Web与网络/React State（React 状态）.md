@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/Web与网络, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [State, React State, 状态, React 状态, 页面状态, 组件状态, 业务状态, UI 状态]
 created: 2026-07-05
 updated: 2026-07-05

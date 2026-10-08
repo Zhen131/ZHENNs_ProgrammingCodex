@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 领域/数据与存储, 层级/基础]
+tags: [领域/数据与存储]
 aliases: [Derived Data, 派生数据, 计算数据, 衍生数据, 派生状态]
 created: 2026-07-05
 updated: 2026-09-06

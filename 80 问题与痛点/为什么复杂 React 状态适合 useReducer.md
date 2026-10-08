@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端架构, 领域/Web与网络, 领域/软件工程]
+tags: [问题/前端架构, 领域/Web与网络, 领域/软件工程]
 aliases: [useState 和 useReducer 有什么区别, 什么时候用 useReducer, 为什么要用 useReducer, 复杂状态管理, React 复杂状态]
 created: 2026-07-05
 updated: 2026-07-05

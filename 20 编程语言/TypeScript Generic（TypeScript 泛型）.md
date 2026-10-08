@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/编程语言, 语言/TypeScript, 层级/基础]
+tags: [语言/TypeScript]
 aliases: [TypeScript Generic, Generic, Generics, 泛型, TypeScript 泛型, 类型参数]
 created: 2026-07-05
 updated: 2026-07-05

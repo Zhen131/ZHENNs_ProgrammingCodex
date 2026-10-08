@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Loss Function, Loss, 损失函数, Cost Function, 代价函数, Objective Function, 目标函数, 损失]
 created: 2026-10-08
 updated: 2026-10-08

@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/心法与修炼, 主题/沟通协作, 层级/基础]
+status: 草稿
+tags: [主题/沟通协作]
 aliases: [PREP, PREP Model, PREP 模型, 结论先行, Point Reason Example Point]
 created: 2026-09-11
 updated: 2026-09-11

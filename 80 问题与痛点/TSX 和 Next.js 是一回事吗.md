@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端语法, 领域/Web与网络, 语言/TypeScript]
+tags: [问题/前端语法, 领域/Web与网络, 语言/TypeScript]
 aliases: [TSX 是 Next.js 吗, TSX 和 Next 的关系, .tsx 和 Next.js]
 created: 2026-06-29
 updated: 2026-06-29

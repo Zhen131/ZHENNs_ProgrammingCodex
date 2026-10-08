@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/计算机基础, 主题/密码学, 层级/基础, 状态/待深化]
+tags: [主题/密码学]
 aliases: [Password-Based Encryption, 基于密码的加密, PBE, 密码加密文件]
 created: 2026-07-28
 updated: 2026-07-28

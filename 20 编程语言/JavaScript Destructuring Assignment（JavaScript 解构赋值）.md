@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/编程语言, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [Destructuring Assignment, JavaScript Destructuring, Array Destructuring, Object Destructuring, 解构赋值, 数组解构, 对象解构, JavaScript 解构赋值]
 created: 2026-07-05
 updated: 2026-07-06

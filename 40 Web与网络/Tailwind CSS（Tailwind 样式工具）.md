@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/Web与网络, 层级/基础]
 aliases: [Tailwind, Tailwind CSS, Tailwind 样式工具, tailwindcss]
 created: 2026-06-29
 updated: 2026-06-29

@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/心法与修炼, 主题/沟通协作, 层级/基础]
+status: 草稿
+tags: [主题/沟通协作]
 aliases: [Upward Reporting, 向上汇报, 工作汇报, 汇报, 汇报原理]
 created: 2026-09-11
 updated: 2026-09-11

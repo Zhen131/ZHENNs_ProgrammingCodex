@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [package, 包, JavaScript package, npm package, 第三方包]
 created: 2026-06-29
 updated: 2026-06-29

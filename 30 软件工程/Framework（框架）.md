@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 层级/基础]
 aliases: [Framework, 框架, 应用框架, Web Framework]
 created: 2026-06-29
 updated: 2026-06-29

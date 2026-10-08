@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
-status: 已整理
-tags: [类型/问题卡片, 问题/概念辨析, 领域/AI]
+status: 草稿
+tags: [问题/概念辨析, 领域/AI]
 aliases: [Token 和 MB 的区别, Token 是 AI 时代的 MB 吗]
 created: 2026-07-13
 updated: 2026-07-13

@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端架构, 领域/Web与网络, 语言/JavaScript]
+tags: [问题/前端架构, 领域/Web与网络, 语言/JavaScript]
 aliases: [为什么不要手动操作 DOM, React 为什么不用 querySelector 改页面, 手动 DOM 更新的问题]
 created: 2026-07-05
 updated: 2026-07-05

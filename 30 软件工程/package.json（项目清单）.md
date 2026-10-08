@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [package.json, 项目清单, npm manifest, 项目说明文件, 命令菜单]
 created: 2026-06-29
 updated: 2026-07-01

@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/计算机基础, 领域/数据与存储, 层级/基础]
+tags: [领域/数据与存储]
 aliases: [UTC Offset, UTC 偏移量, 时区偏移, 偏移量, +08:00, Zone Offset]
 created: 2026-09-06
 updated: 2026-09-06

@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/心法与修炼, 主题/思维模型, 领域/AI, 层级/基础]
+status: 草稿
+tags: [主题/思维模型, 领域/AI]
 aliases: [人生梯度下降, 梯度下降人生观, 人生的损失函数, 人生学习率, Life as Gradient Descent, 梯度下降与人生]
 created: 2026-10-08
 updated: 2026-10-08

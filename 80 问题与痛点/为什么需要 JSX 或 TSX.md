@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端语法, 领域/Web与网络, 语言/JavaScript, 语言/TypeScript]
+tags: [问题/前端语法, 领域/Web与网络, 语言/JavaScript, 语言/TypeScript]
 aliases: [为什么需要 JSX, 为什么需要 TSX, 为什么把 HTML 写进 JavaScript]
 created: 2026-06-29
 updated: 2026-06-29

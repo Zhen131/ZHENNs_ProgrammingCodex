@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Gradient Descent, GD, 梯度下降, SGD, Stochastic Gradient Descent, 随机梯度下降, Mini-batch Gradient Descent, Learning Rate, 学习率, Momentum, 动量, Local Minimum, 局部最优, Adam]
 created: 2026-10-08
 updated: 2026-10-08

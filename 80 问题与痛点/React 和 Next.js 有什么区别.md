@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端框架, 领域/Web与网络, 语言/JavaScript]
+tags: [问题/前端框架, 领域/Web与网络, 语言/JavaScript]
 aliases: [React vs Next.js, React 和 Next 的区别, React 和 Next.js 区别]
 created: 2026-06-29
 updated: 2026-06-29

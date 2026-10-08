@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Tokenization, 分词, Tokenizer]
 created: 2026-07-13
 updated: 2026-09-25

@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Deep Learning, DL, 深度学习, Neural Network, 神经网络, Deep Neural Network, DNN, 深度神经网络]
 created: 2026-09-23
 updated: 2026-10-08

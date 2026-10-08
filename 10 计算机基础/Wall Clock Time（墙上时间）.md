@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/计算机基础, 领域/软件工程, 层级/基础]
+tags: [领域/软件工程]
 aliases: [Wall Clock Time, 墙上时间, 挂钟时间, LocalDateTime, PlainDateTime, 无时区时间]
 created: 2026-09-06
 updated: 2026-09-06

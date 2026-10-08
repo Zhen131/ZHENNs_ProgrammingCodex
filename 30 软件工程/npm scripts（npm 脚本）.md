@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [npm scripts, scripts, package.json scripts, npm 脚本, 命令脚本, node_modules/.bin]
 created: 2026-07-01
 updated: 2026-07-01

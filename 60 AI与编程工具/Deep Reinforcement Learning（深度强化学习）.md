@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/进阶]
+status: 草稿
 aliases: [Deep Reinforcement Learning, DRL, 深度强化学习, DQN, Deep Q-Network]
 created: 2026-09-23
 updated: 2026-09-25

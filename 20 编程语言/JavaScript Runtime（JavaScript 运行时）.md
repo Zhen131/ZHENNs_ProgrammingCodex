@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/编程语言, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [Runtime Environment, 运行环境, JavaScript 运行环境, JS Runtime]
 created: 2026-06-29
 updated: 2026-07-05

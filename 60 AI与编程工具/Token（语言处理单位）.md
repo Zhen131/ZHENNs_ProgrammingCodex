@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [Token, 语言处理单位, 输入 Token, 输出 Token, Input Token, Output Token, Reasoning Token]
 created: 2026-07-13
 updated: 2026-09-25

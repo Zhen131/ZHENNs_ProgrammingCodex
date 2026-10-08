@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/读项目, 领域/软件工程, 语言/JavaScript]
+tags: [问题/读项目, 领域/软件工程, 语言/JavaScript]
 aliases: [为什么先看 package.json, package.json 为什么重要, JavaScript 项目入口]
 created: 2026-06-29
 updated: 2026-07-01

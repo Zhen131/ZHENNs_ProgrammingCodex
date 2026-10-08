@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [Reducer, reducer, reducer function, 状态归约函数, 状态规则处理器, 状态规则层]
 created: 2026-07-05
 updated: 2026-07-06

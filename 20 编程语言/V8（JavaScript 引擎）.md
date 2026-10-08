@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/编程语言, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [V8, JavaScript Engine, JS 引擎, JavaScript 引擎]
 created: 2026-06-29
 updated: 2026-06-29

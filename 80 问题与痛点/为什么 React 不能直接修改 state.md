@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/前端基础, 领域/Web与网络, 语言/JavaScript]
+tags: [问题/前端基础, 领域/Web与网络, 语言/JavaScript]
 aliases: [为什么不能直接改 React State, 为什么不能直接修改 state, React state mutation, 直接修改 state 的问题]
 created: 2026-07-05
 updated: 2026-07-05

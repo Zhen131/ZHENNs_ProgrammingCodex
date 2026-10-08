@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
 status: 草稿
-tags: [类型/问题卡片, 问题/依赖管理, 领域/软件工程, 语言/JavaScript]
+tags: [问题/依赖管理, 领域/软件工程, 语言/JavaScript]
 aliases: [dependencies 和 devDependencies 的区别, 为什么区分运行时依赖和开发依赖, 运行时依赖 vs 开发依赖]
 created: 2026-06-29
 updated: 2026-07-01

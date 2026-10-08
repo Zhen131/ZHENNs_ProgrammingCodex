@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/Web与网络, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [DOM, Document Object Model, 文档对象模型, DOM 树]
 created: 2026-07-05
 updated: 2026-07-05

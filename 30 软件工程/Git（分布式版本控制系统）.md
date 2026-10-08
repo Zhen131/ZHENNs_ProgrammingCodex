@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/软件工程, 工具/Git, 层级/基础, 用途/常见Git指令]
+tags: [工具/Git, 用途/常见Git指令]
 aliases: [Git, 版本控制, 常见 Git 指令, Git 常用命令]
 created: 2026-07-18
 updated: 2026-07-18

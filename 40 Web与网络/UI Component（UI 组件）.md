@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/Web与网络, 语言/JavaScript, 层级/基础]
+tags: [语言/JavaScript]
 aliases: [Component, 组件, UI 组件, React Component, React 组件]
 created: 2026-06-29
 updated: 2026-07-05

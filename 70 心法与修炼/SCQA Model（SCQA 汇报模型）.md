@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/心法与修炼, 主题/沟通协作, 层级/进阶]
+status: 草稿
+tags: [主题/沟通协作]
 aliases: [SCQA, SCQA Model, SCQA 模型, Situation Conflict Question Answer, 情境冲突问题答案]
 created: 2026-09-11
 updated: 2026-09-11

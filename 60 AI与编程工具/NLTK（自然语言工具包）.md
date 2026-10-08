@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 语言/Python, 层级/基础]
+status: 草稿
+tags: [语言/Python]
 aliases: [NLTK, Natural Language Toolkit, 自然语言工具包]
 created: 2026-09-15
 updated: 2026-09-25

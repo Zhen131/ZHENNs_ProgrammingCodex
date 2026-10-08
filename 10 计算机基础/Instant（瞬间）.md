@@ -1,7 +1,7 @@
 ---
 type: 技术卡片
 status: 草稿
-tags: [类型/技术卡片, 领域/计算机基础, 领域/软件工程, 层级/基础]
+tags: [领域/软件工程]
 aliases: [Instant, 瞬间, 时刻, 绝对时刻, Timestamp, 时间戳, Epoch Milliseconds]
 created: 2026-09-06
 updated: 2026-09-06

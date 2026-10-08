@@ -1,7 +1,6 @@
 ---
 type: 技术卡片
-status: 已整理
-tags: [类型/技术卡片, 领域/AI, 层级/基础]
+status: 草稿
 aliases: [N-Gram, N元语法, Bigram, Trigram, 二元组, 三元组]
 created: 2026-09-15
 updated: 2026-09-25

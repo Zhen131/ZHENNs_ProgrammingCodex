@@ -1,7 +1,7 @@
 ---
 type: 问题卡片
-status: 已整理
-tags: [类型/问题卡片, 问题/成本与性能, 领域/AI编程]
+status: 草稿
+tags: [问题/成本与性能, 领域/AI编程]
 aliases: [AI Agent Token Consumption, AI Agent Token 消耗机制, Agent 为什么烧 Token]
 created: 2026-07-13
 updated: 2026-07-13
