@@ -4,7 +4,7 @@ status: 已整理
 tags: [类型/技术卡片, 领域/AI, 层级/基础]
 aliases: [Machine Learning, ML, 机器学习, 机器学习三大范式]
 created: 2026-09-23
-updated: 2026-09-25
+updated: 2026-10-08
 ---
 
 # Machine Learning（机器学习）
@@ -66,3 +66,7 @@ Machine Learning 是让计算机从数据或经验中自动学出规律、再用
 - [[Deep Learning（深度学习）]]：实现工具，可以套到任意一种范式上。
 - [[Deep Reinforcement Learning（深度强化学习）]]：深度学习 + 强化学习的组合。
 - [[深度学习和强化学习有什么区别]]：澄清"深度学习是不是机器学习分支"的常见误区。
+
+## 进一步理解
+
+- [[Loss Function（损失函数）]] + [[Gradient Descent（梯度下降）]]："让模型自己拟合规则"在数学上就是：定义一个 loss，再用梯度下降把它降下去。

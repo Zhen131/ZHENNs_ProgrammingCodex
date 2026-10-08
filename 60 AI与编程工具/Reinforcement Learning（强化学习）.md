@@ -4,7 +4,7 @@ status: 已整理
 tags: [类型/技术卡片, 领域/AI, 层级/基础]
 aliases: [Reinforcement Learning, RL, 强化学习, Agent, Environment, State, Action, Reward, Policy]
 created: 2026-09-23
-updated: 2026-09-25
+updated: 2026-10-08
 ---
 
 # Reinforcement Learning（强化学习）
@@ -56,3 +56,8 @@ State → Agent 选择 Action → Environment 返回新的 State 和 Reward → 
 - [[Supervised Learning（监督学习）]]：对照——监督学习给标准答案，强化学习只给奖惩且可能延迟。
 - [[Deep Reinforcement Learning（深度强化学习）]]：加上深度网络后，不再依赖人工设计状态特征。
 - [[深度学习和强化学习有什么区别]]：强化学习是学习范式，不是深度学习的分支。
+
+## 进一步理解
+
+- [[Loss Function（损失函数）]]：reward 是 RL 里的"反向 loss"，同样面临 Reward Hacking（奖励黑客）——定义错目标比训练慢更危险。
+- [[Life as Gradient Descent（把人生当作梯度下降）]]：人生的反馈稀疏、延迟、无标签，更接近 RL 而不是监督学习。

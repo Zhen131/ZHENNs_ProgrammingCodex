@@ -4,7 +4,7 @@ status: 已整理
 tags: [类型/技术卡片, 领域/AI, 层级/基础]
 aliases: [Deep Learning, DL, 深度学习, Neural Network, 神经网络, Deep Neural Network, DNN, 深度神经网络]
 created: 2026-09-23
-updated: 2026-09-25
+updated: 2026-10-08
 ---
 
 # Deep Learning（深度学习）
@@ -49,7 +49,7 @@ Deep Learning 用多层堆叠的 Neural Network（神经网络）从原始数据
 
 - **吃数据、吃算力**：GPU 能大幅加速训练；小模型用 CPU 也能跑，只是慢一些。
 - **可解释性差**：网络学到的特征藏在大量参数里，很难说清它"为什么"这样判断。
-- **小数据上容易 Overfitting（过拟合）**：金融数据噪声大、有效样本少，网络很容易把噪声当成规律。
+- **小数据上容易 [[Generalization（泛化）|Overfitting（过拟合）]]**：金融数据噪声大、有效样本少，网络很容易把噪声当成规律。
 
 ## 关联
 
@@ -59,3 +59,8 @@ Deep Learning 用多层堆叠的 Neural Network（神经网络）从原始数据
 - [[Tokenization（分词）]]：神经网络需要数值输入，文本要先分词、转成 ID。
 - [[Hugging Face]]：托管和分发预训练深度学习模型的主要平台。
 - [[N-Gram（N元语法）]]：深度学习之前的统计语言模型，用计数而不是神经网络来"预测下一个词"。
+
+## 进一步理解
+
+- [[Gradient Descent（梯度下降）]]：网络的全部参数靠它（配合 Backpropagation）学出来。
+- [[Generalization（泛化）]]：过拟合的判断方法（训练 / 验证 loss 曲线）和对策。
