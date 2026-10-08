@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/JavaScript]
 aliases: [Component, 组件, UI 组件, React Component, React 组件]
 created: 2026-06-29
-updated: 2026-07-05
+updated: 2026-10-08
 ---
 
 # UI Component（UI 组件）
@@ -19,12 +19,7 @@ updated: 2026-07-05
 
 ## 它解决了什么
 
-组件化让开发者可以把复杂界面拆成小块：
-
-- 每个组件负责一小块界面。
-- 组件可以被组合成页面。
-- 重复出现的界面可以复用。
-- 修改某个小组件时，不必同时理解整个页面。
+把页面拆成组件之后，每个组件只管自己那一小块，页面由小块拼成。同样的按钮在十个地方出现，写一次复用十次。改表单的时候只需要看表单那个文件，不用把整个页面读一遍。
 
 ## 核心机制
 
@@ -46,20 +41,12 @@ updated: 2026-07-05
 
 组件拆得太粗会回到大文件问题；拆得太细会让初学者在文件之间跳来跳去。组件边界应该围绕真实职责，而不是为了拆分而拆分。
 
-## 和其他概念的关系
-
-- [[React（React UI 库）]] 以 component 作为核心组织方式。
-- [[React State（React 状态）]] 会影响 component 如何重新显示。
-- [[Next.js（Next 应用框架）]] 会把某些 component 赋予页面或布局角色。
-- [[JSX（JavaScript XML）]] / [[TSX（TypeScript XML）]] 常用来描述 component 的结构。
-- [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了组件为什么只是前端分层中的一层。
-
 ## 关联
 
-- [[React（React UI 库）]]
-- [[React State（React 状态）]]
-- [[JSX（JavaScript XML）]]
-- [[TSX（TypeScript XML）]]
-- [[CSS（层叠样式表）]]
-- [[Tailwind CSS（Tailwind 样式工具）]]
-- [[Next.js App Router（Next 应用路由）]]
+- [[React（React UI 库）]]：以 component 作为核心组织方式。
+- [[React State（React 状态）]]：会影响 component 如何重新显示。
+- [[Next.js（Next 应用框架）]]：会把某些 component 赋予页面或布局角色。
+- [[JSX（JavaScript XML）]]：/ [[TSX（TypeScript XML）]] 常用来描述 component 的结构。
+- [[为什么前端项目要把界面、逻辑、样式和框架分层]]：解释了组件为什么只是前端分层中的一层。
+- [[CSS（层叠样式表）]] / [[Tailwind CSS（Tailwind 样式工具）]]：组件长什么样由它们决定。
+- [[Next.js App Router（Next 应用路由）]]：放到 `src/app/` 特定位置的组件会被当成页面或布局。

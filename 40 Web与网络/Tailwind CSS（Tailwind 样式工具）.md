@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Tailwind, Tailwind CSS, Tailwind 样式工具, tailwindcss]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-10-08
 ---
 
 # Tailwind CSS（Tailwind 样式工具）
@@ -44,24 +44,15 @@ Tailwind 最后仍然会生成 CSS。
 
 ## 典型使用场景
 
-- 快速设置 padding、margin、颜色、背景。
-- 在组件里直接看到样式组合。
-- 减少专门为小样式写 CSS class 的次数。
+给一个按钮加内边距、白字、黑底，不用去 CSS 文件里新起一个 class 名再写三行规则，直接在组件里写 `className="p-4 text-white bg-black"` 就完了。样式和组件在同一个地方，看代码的时候一眼能看到它长什么样。
 
 ## 局限性
 
 Tailwind 会让 `className` 变长，初学者也可能被大量缩写淹没。它减少了传统 CSS 文件，但没有消除对 CSS 基础概念的需要。
 
-## 和其他概念的关系
-
-- [[CSS（层叠样式表）]] 是 Tailwind 的基础。
-- [[React（React UI 库）]] component 常通过 `className` 使用 Tailwind。
-- [[TSX（TypeScript XML）]] 是 Tailwind className 经常出现的位置。
-- [[Tailwind 和 CSS 是一回事吗]] 是对应问题入口。
-
 ## 关联
 
-- [[CSS（层叠样式表）]]
-- [[TSX（TypeScript XML）]]
-- [[React（React UI 库）]]
-- [[Tailwind 和 CSS 是一回事吗]]
+- [[CSS（层叠样式表）]]：是 Tailwind 的基础。
+- [[React（React UI 库）]]：component 常通过 `className` 使用 Tailwind。
+- [[TSX（TypeScript XML）]]：是 Tailwind className 经常出现的位置。
+- [[Tailwind 和 CSS 是一回事吗]]：是对应问题入口。

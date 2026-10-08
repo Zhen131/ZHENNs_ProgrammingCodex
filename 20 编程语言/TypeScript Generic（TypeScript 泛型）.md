@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/TypeScript]
 aliases: [TypeScript Generic, Generic, Generics, 泛型, TypeScript 泛型, 类型参数]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-10-08
 ---
 
 # TypeScript Generic（TypeScript 泛型）
@@ -69,16 +69,9 @@ Generic 只能帮助开发阶段的类型理解和检查，不能替代运行时
 
 Generic 写得太深时，也会增加读代码成本。初学阶段可以先抓住一个核心判断：尖括号里大多是在描述“这次代码处理什么类型的数据”，不是在创建运行时对象。
 
-## 和其他概念的关系
-
-- [[TypeScript（类型化 JavaScript）]] 提供 Generic 语法和类型检查能力。
-- [[useState（React 状态 Hook）]] 常用 Generic 标注状态类型。
-- [[useReducer（React Reducer Hook）]] 在复杂状态里也常需要 Generic 或显式类型约束。
-- [[JavaScript Destructuring Assignment（JavaScript 解构赋值）]] 解释 `const [state, setState] = ...` 的左侧语法。
-
 ## 关联
 
-- [[TypeScript（类型化 JavaScript）]]
-- [[useState（React 状态 Hook）]]
-- [[useReducer（React Reducer Hook）]]
-- [[JavaScript Destructuring Assignment（JavaScript 解构赋值）]]
+- [[TypeScript（类型化 JavaScript）]]：提供 Generic 语法和类型检查能力。
+- [[useState（React 状态 Hook）]]：常用 Generic 标注状态类型。
+- [[useReducer（React Reducer Hook）]]：在复杂状态里也常需要 Generic 或显式类型约束。
+- [[JavaScript Destructuring Assignment（JavaScript 解构赋值）]]：解释 `const [state, setState] = ...` 的左侧语法。

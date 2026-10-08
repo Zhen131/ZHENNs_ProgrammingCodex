@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/JavaScript]
 aliases: [React, React.js, React UI Library, React UI 库]
 created: 2026-06-29
-updated: 2026-07-05
+updated: 2026-10-08
 ---
 
 # React（React UI 库）
@@ -21,12 +21,7 @@ updated: 2026-07-05
 
 ## 它解决了什么
 
-React 主要帮助开发者解决：
-
-- 界面如何拆成组件。
-- 组件之间如何组合。
-- 数据变化后界面如何更新。
-- 如何用 [[React State（React 状态）]] 代替到处手动修改 DOM。
+React 做两件事：让你把页面拆成一个个组件再拼起来，以及数据一变、页面自动跟着变——你只管改 [[React State（React 状态）]]，不用自己去找 DOM 节点一个个改。
 
 暂时可以把 React component 理解成“一个返回界面结构的函数”：
 
@@ -72,32 +67,19 @@ React 主要负责 UI component 和界面更新，不直接规定完整应用的
 
 React state 也不是永久数据库。放在页面内存里的账本数据刷新后会丢失；如果需要长期保存交易记录，需要 IndexedDB、后端数据库或其他持久化方案。
 
-## 和其他概念的关系
-
-- [[UI Component（UI 组件）]] 是 React 的核心组织单元。
-- [[React State（React 状态）]] 让 React 根据数据变化重新渲染页面。
-- [[useState（React 状态 Hook）]] 是创建组件 state 的常见 Hook。
-- [[useReducer（React Reducer Hook）]] 是管理复杂 state 修改规则的常见 Hook。
-- [[Reducer（状态归约函数）]] 让复杂状态变化集中到统一规则层。
-- [[DOM（文档对象模型）]] 是浏览器中的页面结构，React 会帮助开发者减少手动 DOM 同步。
-- [[Next.js（Next 应用框架）]] 基于 React，并提供应用级规则。
-- [[TSX（TypeScript XML）]] 常用于在 TypeScript 中写 React component。
-- [[React 和 Next.js 有什么区别]] 是理解 React 边界的问题入口。
-- [[为什么 React 不推荐手动操作 DOM]] 解释 React 的状态驱动更新为什么重要。
-- [[为什么复杂 React 状态适合 useReducer]] 解释简单状态和复杂状态的管理分界。
-
 ## 关联
 
-- [[UI Component（UI 组件）]]
-- [[React State（React 状态）]]
-- [[useState（React 状态 Hook）]]
-- [[useReducer（React Reducer Hook）]]
-- [[Reducer（状态归约函数）]]
-- [[DOM（文档对象模型）]]
-- [[JSX（JavaScript XML）]]
-- [[TSX（TypeScript XML）]]
-- [[Next.js（Next 应用框架）]]
-- [[为什么前端项目要把界面、逻辑、样式和框架分层]]
-- [[为什么 React 不推荐手动操作 DOM]]
-- [[为什么 React 不能直接修改 state]]
-- [[为什么复杂 React 状态适合 useReducer]]
+- [[UI Component（UI 组件）]]：是 React 的核心组织单元。
+- [[React State（React 状态）]]：让 React 根据数据变化重新渲染页面。
+- [[useState（React 状态 Hook）]]：是创建组件 state 的常见 Hook。
+- [[useReducer（React Reducer Hook）]]：是管理复杂 state 修改规则的常见 Hook。
+- [[Reducer（状态归约函数）]]：让复杂状态变化集中到统一规则层。
+- [[DOM（文档对象模型）]]：是浏览器中的页面结构，React 会帮助开发者减少手动 DOM 同步。
+- [[Next.js（Next 应用框架）]]：基于 React，并提供应用级规则。
+- [[TSX（TypeScript XML）]]：常用于在 TypeScript 中写 React component。
+- [[React 和 Next.js 有什么区别]]：是理解 React 边界的问题入口。
+- [[为什么 React 不推荐手动操作 DOM]]：解释 React 的状态驱动更新为什么重要。
+- [[为什么复杂 React 状态适合 useReducer]]：解释简单状态和复杂状态的管理分界。
+- [[JSX（JavaScript XML）]]：React 组件里那段长得像 HTML 的东西就是 JSX。
+- [[为什么前端项目要把界面、逻辑、样式和框架分层]]：React 只是前端分层里的一层，管零件，不管样式和路由。
+- [[为什么 React 不能直接修改 state]]：直接改对象 React 不知道，必须走 `setState`。

@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/TypeScript, 语言/JavaScript]
 aliases: [TSX, TypeScript XML, .tsx]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-10-08
 ---
 
 # TSX（TypeScript XML）
@@ -19,12 +19,7 @@ React component 既需要界面结构，也需要逻辑和数据类型。只用 
 
 ## 它解决了什么
 
-TSX 允许开发者在同一个组件文件中同时表达：
-
-- TypeScript 逻辑和类型。
-- 类似 HTML 的 JSX 界面结构。
-
-常见后缀关系可以先这样记：
+一个 `.tsx` 文件里，上半段写 TypeScript 逻辑和类型，下半段 `return` 一段长得像 HTML 的界面结构，两样东西在同一个文件里。后缀怎么认：
 
 ```text
 .ts   = TypeScript 文件
@@ -49,19 +44,12 @@ TSX 是文件语法，不是 [[Next.js（Next 应用框架）]]。Next.js 项目
 
 TSX 只是语法层。它不规定路由、布局、构建、部署，也不等于 Next.js。把 TSX 当成框架，会混淆“文件怎么写”和“应用怎么组织”。
 
-## 和其他概念的关系
-
-- [[JSX（JavaScript XML）]] 是 TSX 的界面语法基础。
-- [[TypeScript（类型化 JavaScript）]] 提供类型系统。
-- [[UI Component（UI 组件）]] 是 TSX 常用来描述的界面零件。
-- [[Next.js App Router（Next 应用路由）]] 会把特定位置的 `page.tsx`、`layout.tsx` 赋予特殊角色。
-- [[TSX 和 Next.js 是一回事吗]] 是对应问题入口。
-
 ## 关联
 
-- [[TypeScript（类型化 JavaScript）]]
-- [[JSX（JavaScript XML）]]
-- [[React（React UI 库）]]
-- [[UI Component（UI 组件）]]
-- [[Next.js（Next 应用框架）]]
-- [[TSX 和 Next.js 是一回事吗]]
+- [[JSX（JavaScript XML）]]：是 TSX 的界面语法基础。
+- [[TypeScript（类型化 JavaScript）]]：提供类型系统。
+- [[UI Component（UI 组件）]]：是 TSX 常用来描述的界面零件。
+- [[Next.js App Router（Next 应用路由）]]：会把特定位置的 `page.tsx`、`layout.tsx` 赋予特殊角色。
+- [[TSX 和 Next.js 是一回事吗]]：是对应问题入口。
+- [[React（React UI 库）]]：TSX 写出来的东西就是 React 组件。
+- [[Next.js（Next 应用框架）]]：Next.js 项目里的 `page.tsx` 用的就是这个语法，但 TSX 本身不属于 Next.js。

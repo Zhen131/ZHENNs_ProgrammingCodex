@@ -4,7 +4,7 @@ status: 草稿
 tags: [领域/软件工程, 语言/JavaScript]
 aliases: [Next App Router, App Router, Next 应用路由, page.tsx, layout.tsx]
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-10-08
 ---
 
 # Next.js App Router（Next 应用路由）
@@ -19,12 +19,7 @@ updated: 2026-06-29
 
 ## 它解决了什么
 
-App Router 让 Next.js 可以根据目录和文件名自动理解应用结构：
-
-- 哪个文件是页面。
-- 哪个文件是布局。
-- 哪个目录对应哪个路由。
-- 哪些 UI 会作为共同外壳复用。
+你不用再写一张"哪个 URL 对应哪个组件"的路由表。把文件放到约定的位置，Next.js 看目录名就知道这是哪个路由、看文件名就知道这是页面还是布局。
 
 ## 核心机制
 
@@ -61,16 +56,11 @@ layout.tsx 和 page.tsx 是 React component。
 
 这是一套框架约定，不是 TSX 文件语法本身。脱离 Next.js 的 `src/app/` 规则，`page.tsx` 和 `layout.tsx` 不会自动拥有同样的应用含义。
 
-## 和其他概念的关系
-
-- [[Next.js（Next 应用框架）]] 提供 App Router 规则。
-- [[TSX（TypeScript XML）]] 是 `page.tsx`、`layout.tsx` 的文件语法。
-- [[UI Component（UI 组件）]] 是这些文件的 React 本质。
-- [[TSX 和 Next.js 是一回事吗]] 解释语法和框架规则的区别。
-
 ## 关联
 
-- [[Next.js（Next 应用框架）]]
-- [[TSX（TypeScript XML）]]
-- [[React（React UI 库）]]
-- [[为什么 .next 不用读]]
+- [[Next.js（Next 应用框架）]]：提供 App Router 规则。
+- [[TSX（TypeScript XML）]]：是 `page.tsx`、`layout.tsx` 的文件语法。
+- [[UI Component（UI 组件）]]：是这些文件的 React 本质。
+- [[TSX 和 Next.js 是一回事吗]]：解释语法和框架规则的区别。
+- [[React（React UI 库）]]：`page.tsx` 里写的就是普通 React 组件。
+- [[为什么 .next 不用读]]：`src/app/` 是你写的源码，`.next/` 是构建出来的产物，别搞混。

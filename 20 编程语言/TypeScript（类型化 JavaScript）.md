@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/TypeScript, 语言/JavaScript]
 aliases: [TypeScript, TS, 类型化 JavaScript, Typed JavaScript]
 created: 2026-06-29
-updated: 2026-07-05
+updated: 2026-10-08
 ---
 
 # TypeScript（类型化 JavaScript）
@@ -21,13 +21,7 @@ JavaScript 很灵活，但项目变大后，开发者容易看不清对象有哪
 
 ## 它解决了什么
 
-TypeScript 让代码在运行前就能表达更多结构信息：
-
-- 对象应该有哪些字段。
-- 函数应该接收什么参数。
-- 返回值是什么形状。
-- 某个值是否可能缺失。
-- 编辑器能基于类型提供提示和检查。
+TypeScript 让你在代码跑起来之前就把"这个对象有哪些字段、这个函数吃什么参数、返回什么、哪个值可能是空的"写清楚。写清楚之后两件事变了：编辑器能给你补全和报错，读代码的人不用再猜。
 
 ## 核心机制
 
@@ -58,24 +52,14 @@ const [draft, setDraft] = useState<FormDraft>(initialDraft);
 
 TypeScript 主要在开发阶段帮助理解和检查代码。它不能替代运行时校验，也不能自动解释业务含义。类型写得太复杂时，也会让初学者先被类型系统本身挡住。
 
-## 和其他概念的关系
-
-- [[JavaScript Runtime（JavaScript 运行时）]] 解释代码最终运行在哪些环境里。
-- [[TSX（TypeScript XML）]] 是 TypeScript 和 JSX 结合后常用于写 React 组件的文件语法。
-- [[React（React UI 库）]] 项目常用 TypeScript 来约束 component 的数据结构。
-- [[TypeScript Generic（TypeScript 泛型）]] 解释尖括号类型参数如何帮助代码复用和类型约束。
-- [[useState（React 状态 Hook）]] 可以用 TypeScript Generic 标注 state 类型。
-- [[useReducer（React Reducer Hook）]] 在复杂 state 中也常搭配 TypeScript 类型约束 action 和 state。
-- [[UI Component（UI 组件）]] 是 TypeScript 在 React 场景里经常描述的数据和行为对象。
-- [[为什么前端项目要把界面、逻辑、样式和框架分层]] 解释了 TypeScript 在前端分层中的位置。
-
 ## 关联
 
-- [[TSX（TypeScript XML）]]
-- [[React（React UI 库）]]
-- [[useState（React 状态 Hook）]]
-- [[useReducer（React Reducer Hook）]]
-- [[TypeScript Generic（TypeScript 泛型）]]
-- [[JavaScript Destructuring Assignment（JavaScript 解构赋值）]]
-- [[UI Component（UI 组件）]]
-- [[JavaScript Runtime（JavaScript 运行时）]]
+- [[JavaScript Runtime（JavaScript 运行时）]]：解释代码最终运行在哪些环境里。
+- [[TSX（TypeScript XML）]]：是 TypeScript 和 JSX 结合后常用于写 React 组件的文件语法。
+- [[React（React UI 库）]]：项目常用 TypeScript 来约束 component 的数据结构。
+- [[TypeScript Generic（TypeScript 泛型）]]：解释尖括号类型参数如何帮助代码复用和类型约束。
+- [[useState（React 状态 Hook）]]：可以用 TypeScript Generic 标注 state 类型。
+- [[useReducer（React Reducer Hook）]]：在复杂 state 中也常搭配 TypeScript 类型约束 action 和 state。
+- [[UI Component（UI 组件）]]：是 TypeScript 在 React 场景里经常描述的数据和行为对象。
+- [[为什么前端项目要把界面、逻辑、样式和框架分层]]：解释了 TypeScript 在前端分层中的位置。
+- [[JavaScript Destructuring Assignment（JavaScript 解构赋值）]]：`const [draft, setDraft] = useState<FormDraft>(...)` 左边那个方括号是解构，不是 TypeScript 语法。

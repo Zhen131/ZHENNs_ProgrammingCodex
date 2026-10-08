@@ -1,53 +1,47 @@
 ---
 type: 技术卡片
 status: 草稿
-aliases: [Token, 语言处理单位, 输入 Token, 输出 Token, Input Token, Output Token, Reasoning Token]
+aliases: [Token, 词元, 语言处理单位, Input Token, Output Token, Reasoning Token, Cached Input, 输入 Token, 输出 Token]
 created: 2026-07-13
-updated: 2026-09-25
+updated: 2026-10-08
 ---
 
 # Token（语言处理单位）
 
 ## 一句话
 
-Token 是模型通过 [[Tokenization（分词）]] 得到并实际处理的离散符号单位；它可以用来描述输入、输出和部分模型的内部推理用量，但不是字数、单词数或数据大小。
+Token 是模型真正"看到"的最小单位。你发给模型的是一段文字，模型拿到的是一串数字 ID，每个 ID 对应一个 token。它不是字数，不是单词数，也不是文件大小——它是模型自己的计数单位。
 
-## 背景：为什么不能只数文字
+## 背景：模型为什么不直接读字符串
 
-自然语言和代码都是字符串，而模型接收的是数字 ID 序列。同一个字、单词或标点在不同 tokenizer、语言和上下文中可能被切成不同数量的 token，因此不存在稳定的“一个汉字等于一个 token”换算公式。
+你写"梯度下降"四个字，模型看不懂汉字。它只认数字。所以中间必须有一步：把字符串切成小块，每块换成一个数字。这一步叫 [[Tokenization（分词）]]，切出来的每一小块就是一个 token。
 
-日常可以用 tokenizer 工具做估算，但不能把中文字符数直接当成精确账单。数量级类比（例如“一百万 token 等于一本小说”）也只适合建立粗略直觉，不能跨语言、模型和文本类型精确换算。
+麻烦在于，怎么切是每个模型自己定的。同一句话，GPT 切出 20 个 token，Claude 可能切出 23 个。英文一个单词常常就是一个 token，中文一个字可能是一个 token，也可能一个半。所以你没法背一个"一个汉字 = 几个 token"的换算表，换个模型就不对了。
 
-## 常见用量分类
+想估的话，用那个模型自带的 tokenizer 工具数一下，这是唯一靠谱的办法。
 
-- **Input Token（输入 Token）**：本次请求中提供给模型处理的内容，可能包括用户消息、系统指令、历史对话、工具结果、代码和文件内容。
-- **Cached Input（缓存输入）**：输入 token 中命中 Prompt Caching（提示缓存）的部分。它仍属于输入用量，但某些 API 会以更低价格处理。
-- **Output Token（输出 Token）**：模型生成的输出用量。在自回归生成中，模型逐 token 预测后续内容。
-- **Reasoning Token（推理 Token）**：部分 reasoning model（推理模型）内部用于推理的 token。是否展示、如何计入输出与如何计费取决于具体模型和平台，不能笼统地说“思考一定不消耗 token”。
+## 核心机制
 
-## Token 与费用不是同一个概念
+账单上通常把 token 分四类，你看用量时要分开看：
 
-Token 是用量单位，费用则是“各类 token 数量 × 对应费率”的结果。不同模型、服务层级和产品可能采用不同费率或额度规则，所以：
+- **Input Token（输入 Token）**：这次请求里送进模型的所有东西。不只是你打的那句话，还包括 system prompt、之前的对话历史、工具返回的结果、你贴的文件。Agent 用量大，大头就在这里。
+- **Cached Input（缓存输入）**：输入里命中 Prompt Caching（提示缓存）的那部分。比如你连续几轮都带着同一份 10 万字的 system prompt，API 可以不重算，按低价收。它还是算输入用量，只是便宜。
+- **Output Token（输出 Token）**：模型吐出来的字。模型是一个 token 一个 token 往外蹦的，所以输出越长越贵，而且一般比输入单价高。
+- **Reasoning Token（推理 Token）**：推理模型在回答前"想"的那部分。有的平台给你看，有的不给看，但都要算钱。所以别以为模型想了半天不花钱。
 
-- `total_tokens` 不一定足以独立推导费用，还要看 input、cached input、output 等分类。
-- Output Token 经常比 Input Token 单价高，但这是定价策略，不是 Token 定义，也不是所有产品永远不变的规律。
-- ChatGPT、Codex 等订阅产品的额度规则不能直接套用 OpenAI API 的按 token 价格。
+## 容易混淆
 
-## 它能衡量什么，不能衡量什么
+**Token 不是钱。** Token 是用量，钱 = 各类 token 数 × 各自单价。两个模型 token 数一样，账单可能差十倍。`total_tokens` 一个数字算不出费用，得拆开看 input / cached / output。
 
-Token 数可以近似表示模型处理了多少符号序列，适合观察上下文规模、生成长度和 API 用量。它不能直接衡量：
+**Token 不是 MB。** 见 [[为什么 Token 不能直接等同于 MB]]。
 
-- 内容占多少 KB 或 MB；
-- 任务到底有多难；
-- 模型进行了多少“理解”；
-- Agent 完成任务的质量。
+**Token 不是工作量。** 它只说明模型处理了多少符号，不说明任务多难、模型理解了多少。把它叫"AI 工作量单位"只是个方便的说法。
 
-因此，把 Token 称为“AI 工作量单位”有助于建立直觉，但更准确的说法是：**Token 是模型计算与计量所围绕的序列单位，工作量和成本还受模型、缓存、推理方式及调用轮数影响。**
+**订阅额度不是 API 价格。** ChatGPT、Codex 这类订阅产品有自己的额度规则，不能拿 OpenAI API 的 token 单价去套。
 
 ## 关联
 
-- [[Tokenization（分词）]]：说明字符串怎样变成 token 序列。
-- [[Context Window（上下文窗口）]]：限制一次模型调用可处理的 token 范围。
-- [[为什么 Token 不能直接等同于 MB]]：区分语言序列计量与字节计量。
-- [[为什么 AI Agent 比普通聊天消耗更多 Token]]：解释多轮工具工作流如何累积 token 用量。
-- [[Byte-Pair Encoding（字节对编码，BPE）]]：主流的子词切分算法，解释了为什么同一个词可能被切成多个 token。
+- [[Tokenization（分词）]]：字符串怎么变成 token 串，就是这一步决定的。
+- [[Context Window（上下文窗口）]]：一次调用最多能装多少 token，这就是它的上限。
+- [[为什么 Token 不能直接等同于 MB]]：两种单位回答的是不同问题。
+- [[为什么 AI Agent 比普通聊天消耗更多 Token]]：一句"修一下 bug"为什么能烧掉几十万 token。

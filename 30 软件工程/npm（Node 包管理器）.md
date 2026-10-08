@@ -4,7 +4,7 @@ status: 草稿
 tags: [语言/JavaScript]
 aliases: [npm, Node Package Manager, Node 包管理器, 包管理器]
 created: 2026-06-29
-updated: 2026-07-01
+updated: 2026-10-08
 ---
 
 # npm（Node 包管理器）
@@ -56,28 +56,19 @@ package-lock.json
 
 ## 典型使用场景
 
-- `npm install`：根据依赖清单安装 package。
-- `npm run dev`：启动开发模式。
-- `npm test`：运行测试命令。
-- `npm run build`：构建正式版本。
+拿到一个新项目，先 `npm install` 把依赖装齐，再 `npm run dev` 跑起来看。改完代码 `npm test` 跑测试，要上线了 `npm run build` 打包。四条命令覆盖日常九成的操作。
 
 ## 局限性
 
 npm 不是业务代码，也不是运行环境本身。它依赖 [[Node.js（Node 运行环境）]] 生态工作，负责管理 package 和执行 scripts。看项目时不应该把 npm、Node.js、node_modules 混成同一个概念。
 
-## 和其他概念的关系
-
-- [[Package（软件包）]] 是 npm 管理的基本单元。
-- [[Dependency（依赖）]] 是项目和 package 之间的需要关系。
-- [[package.json（项目清单）]] 是 npm 的主要入口文件。
-- [[npm scripts（npm 脚本）]] 是 npm 执行项目命令的脚本机制。
-- [[为什么 package.json 是读 JavaScript 项目的入口]] 解释了为什么工程师会先看 package.json。
-
 ## 关联
 
-- [[Node.js（Node 运行环境）]]
-- [[Package（软件包）]]
-- [[package.json（项目清单）]]
-- [[npm scripts（npm 脚本）]]
-- [[node_modules（依赖实体目录）]]
-- [[Next.js（Next 应用框架）]]
+- [[Package（软件包）]]：是 npm 管理的基本单元。
+- [[Dependency（依赖）]]：是项目和 package 之间的需要关系。
+- [[package.json（项目清单）]]：是 npm 的主要入口文件。
+- [[npm scripts（npm 脚本）]]：是 npm 执行项目命令的脚本机制。
+- [[为什么 package.json 是读 JavaScript 项目的入口]]：解释了为什么工程师会先看 package.json。
+- [[Node.js（Node 运行环境）]]：npm 跟着 Node 一起装，没有 Node 就没有 npm。
+- [[node_modules（依赖实体目录）]]：npm install 下载的东西全放在这里。
+- [[Next.js（Next 应用框架）]]：`npm run dev` 启动的就是 Next.js 的开发服务器。
