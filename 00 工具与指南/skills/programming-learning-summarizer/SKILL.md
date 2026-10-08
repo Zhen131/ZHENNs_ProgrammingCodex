@@ -1,96 +1,37 @@
 ---
 name: programming-learning-summarizer
-description: Summarize programming learning from another project into a vault-ready learning packet for 编程宝典. Use when the user asks to整理学习过程, summarize debugging, explain code they just learned, capture AI coding lessons, or prepare notes before importing them into the Obsidian programming knowledge base.
+description: Zhenn 在别的项目里学到了东西（调 bug、读代码、问 AI、看文档），把这次学习整理成一份可以稍后入库「编程宝典」的学习包。用户说"整理一下刚学的"、"沉淀一下"、"生成学习包"时使用。这个 skill 不直接写入编程宝典。
 ---
 
-# Programming Learning Summarizer
+# 编程学习整理
 
-Use this skill outside the `编程宝典` vault when Ethan learns something while working in another project.
+把别的项目里的学习过程整理成**学习包**，之后交给 `programming-knowledge-ingest` 入库。
 
-The goal is to produce a clear learning packet that can later be imported into `编程宝典` by `programming-knowledge-ingest`.
-
-## Workflow
-
-1. Identify the learning context.
-   - Project name
-   - Feature, bug, file, command, conversation, or code path involved
-   - What Ethan originally did not understand
-
-2. Extract the real pain point.
-   - What problem appeared before the technique was understood?
-   - Why did the code feel like a black box?
-   - What would go wrong if Ethan only copied the AI-generated answer?
-
-3. Extract candidate cards.
-   - Technology card candidates: stable concepts worth reusing.
-   - Problem card candidates: questions that explain why the technology matters.
-   - Project context snippets: concrete file paths, symptoms, or code observations that should be embedded inside the relevant cards.
-   - Separate reusable concepts from project-only names, variables, files, services, and domain objects.
-
-4. Explain with Chinese logic and English terms.
-   - Use Chinese for reasoning and learning reflection.
-   - Keep technical terms in English.
-   - First mention format: `English（中文）`.
-
-5. Separate facts from uncertainty.
-   - Do not invent conclusions.
-   - Mark uncertain items as `待确认`.
-   - If a claim depends on code context, cite the file path or observed behavior.
-
-## Output Format
+## 输出格式
 
 ```markdown
-# 待入库学习包：主题
+# 学习包：<一句话主题>  <YYYY-MM-DD>
 
-## 1. 学习背景
+## 背景
+在哪个项目、做什么的时候、一开始哪里不懂。两三句。
 
-- 项目：
-- 场景：
-- 当时的问题：
+## 候选技术卡
+- `English Term（中文）`：一句话说它是什么。为什么值得存。
+- ...
 
-## 2. 核心痛点
+## 候选问题卡
+- 为什么 X：痛点一句话。
+- ...
 
-用中文说明为什么这件事值得学习。
+## 项目里的例子
+可以写进卡片正文当证据的代码片段 / 报错 / 场景。只留能解释机制的，不留流水账。
 
-## 3. 我学到的关键技术
-
-### English Term（中文翻译）
-
-- 一句话：
-- 背景问题：
-- 核心机制：
-- 局限性：
-- 相关代码或现象：
-
-## 4. 问题卡片候选
-
-- `为什么需要 X`
-- `X 解决了什么问题`
-
-## 5. 技术卡片候选
-
-- `English Term（中文翻译）`
-
-## 6. 项目语境
-
-- 可以写进技术卡片或问题卡片正文的项目、文件、bug、命令或代码观察。
-
-## 7. 建议入库动作
-
-- 新建：
-- 更新：
-- 暂存到 `90 素材与临时笔记`：
-- 不建议单独成卡：
-
-## 8. 待确认
-
-- [ ] 不确定点
+## 不确定的地方
+需要查证或让 Zhenn 确认的。
 ```
 
-## Rules
+## 规则
 
-- Do not write directly into `编程宝典` unless the user explicitly asks.
-- Prefer concrete code observations over generic textbook explanations.
-- Do not propose standalone aggregation notes; project context should be embedded in technical/problem cards.
-- Do not treat project-only names as technology card candidates unless they represent a cross-project reusable concept.
-- Keep the packet compact enough to import, but complete enough that another AI can perform入库 without rereading the whole project.
+- 中文讲逻辑，英文定术语，术语第一次出现写 `English（中文）`。
+- 项目里的变量名、文件名、类名不是候选卡。把它们背后的通用概念抽出来。
+- 宁可候选少，不要为了凑数拆弱概念。

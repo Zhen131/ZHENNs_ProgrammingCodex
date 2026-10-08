@@ -1,0 +1,40 @@
+# 学习历程：按入库时间倒序列出所有卡片。
+# 这是 Obsidian Bases 自动生成的视图，不用手动维护。
+filters:
+  and:
+    - file.hasProperty("type")
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: 卡片
+  type:
+    displayName: 类型
+  status:
+    displayName: 状态
+  created:
+    displayName: 入库日期
+  file.folder:
+    displayName: 文件夹
+views:
+  - type: table
+    name: 最近学的
+    order:
+      - file.name
+      - type
+      - created
+      - file.folder
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: 还没校读的
+    filters:
+      and:
+        - status == "草稿"
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: created
+        direction: ASC
