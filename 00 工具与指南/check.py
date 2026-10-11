@@ -2,6 +2,7 @@
 """编程宝典体检脚本。在仓库根目录运行：python3 "00 工具与指南/check.py"
 
 检查：断链、孤岛（没人链它）、frontmatter 缺字段、关联为空、文件名不合规。
+另外按《写作规范》报 WARN：名词堆、语气词、关联里的裸链接。
 零报错才算入库完成。只读，不改任何文件。
 """
 import collections, glob, os, re, sys
@@ -49,6 +50,23 @@ for f in files:
         else:
             errors.append(f"[断链 -> {l}] {f}")
     if fields.get("type") in ("技术卡片", "问题卡片"):
+        body = re.sub(r"```.*?```", "", text[m.end():], flags=re.S)
+        # 名词堆：连续 >=4 个列表项，每项去掉标点后不超过 8 个字
+        run = 0
+        for line in body.split("\n"):
+            item = re.match(r"\s*[-*]\s+(.*)", line)
+            if item and len(re.sub(r"[。．.，、：:；;\s`]", "", item.group(1))) <= 8:
+                run += 1
+                if run == 4:
+                    warns.append(f"[名词堆：连续 4 个短列表项，改成句子] {f}")
+            else:
+                run = 0
+        tone = re.findall(r"(啊|呢|嘛|呀|对不对|对吧)[，。！？\n]", body)
+        if tone:
+            warns.append(f"[语气词 {len(tone)} 处] {f}")
+        bare = re.findall(r"^- \[\[[^\]]+\]\]\s*$", body, re.M)
+        if len(bare) >= 3:
+            warns.append(f"[关联里 {len(bare)} 条裸链接没写关系] {f}")
         if "## 关联" not in text:
             errors.append(f"[没有 ## 关联] {f}")
         elif not links:
