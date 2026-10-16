@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Longest Chain Rule, 最长链规则, Heaviest Chain, 最重链, Fork, 分叉, Orphan Block, Stale Block, 孤块, 过期块, Fork Choice]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # Longest Chain Rule（最长链规则）
@@ -39,3 +39,5 @@ Longest Chain Rule 是节点遇到分叉时的裁判规则：永远认最长的�
 - [[Selfish Mining（自私挖矿）]]：利用平局和领先，让诚实区块变成孤块。
 - [[Finality（最终性）]]：PoW 下"越长越安全"，是 probabilistic finality 的来源。
 - [[Attestation（验证者投票）]]：PoS 里选链头靠投票权重，而不是链的长度。
+- [[Proof of Work（工作量证明）]]："累计工作量"是怎么算出来的，target 和难度在那张卡。
+- [[Block Header（区块头）]]：两个区块指向同一个 Previous Block Hash，就是分叉。

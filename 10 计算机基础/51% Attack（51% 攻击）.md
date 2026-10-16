@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [51% Attack, 51% 攻击, 51 Percent Attack, Majority Attack, 多数攻击, 过半算力攻击, Hash Power, 算力]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # 51% Attack（51% 攻击）
@@ -55,3 +55,4 @@ PoS 里没有算力，对应的门槛是质押量：1/3 能让链无法 finalize
 - [[Double Spending（双花）]]：51% 攻击最典型的用途。
 - [[Finality（最终性）]]：确认数越多，攻击者要追的路越长。
 - [[Proof of Stake（权益证明）]]：PoS 把 51% 的门槛换成了质押量的 1/3 和 2/3。
+- [[Proof of Work（工作量证明）]]：PoW 的安全假设就是坏人没有过半算力，这张卡讲它被打破的后果。

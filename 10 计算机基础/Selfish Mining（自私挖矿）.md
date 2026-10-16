@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Selfish Mining, 自私挖矿, Block Withholding, Majority is not Enough, Eyal Sirer, Orphan Block, 孤块, 私有链]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # Selfish Mining（自私挖矿）
@@ -54,3 +54,4 @@ Selfish Mining 是矿工把挖到的区块先藏起来，攒出一条更长的�
 - [[Longest Chain Rule（最长链规则）]]：攻击能成立，是因为网络无条件接受更长的链。
 - [[51% Attack（51% 攻击）]]：同样是共识层的攻击，但 51% 要过半算力，自私挖矿不用。
 - [[Eclipse Attack（日蚀攻击）]]：可以拿来配合，把受害者的算力借过来。
+- [[Proof of Work（工作量证明）]]：中奖后先藏块不报，是在 PoW 摇号规则上动手脚。

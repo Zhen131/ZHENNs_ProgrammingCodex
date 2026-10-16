@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Transaction, TX, Tx, 交易, 区块链交易, 转账, Transfer, TX Hash, 交易哈希, Mempool, 内存池, Gas, Gas Limit, Gas Price, Gwei, ERC-20 Transfer, Pending]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # Transaction（区块链交易）
@@ -67,3 +67,5 @@ Pending 的 TX 如果手续费太低，会一直卡在内存池，而且会连�
 - [[Nonce（账户交易序号）]]：TX 里的序号字段，决定顺序、防重放、能替换卡住的 TX。
 - [[Race Attack（竞速攻击）]]：两笔冲突的 TX 同时在内存池里，只有一笔能被打包。
 - [[Finality（最终性）]]：TX 从 Pending 到不可逆的过程。
+- [[Block Header（区块头）]]：TX 被打包后，整块交易汇成 Merkle Root 写进区块头。
+- [[Proof of Work（工作量证明）]]：比特币里从 mempool 挑 TX、打包出块的过程。

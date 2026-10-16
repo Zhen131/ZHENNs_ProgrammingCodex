@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Proof of Stake, PoS, 权益证明, Staking, 质押, Validator, 验证者, Slashing, 罚没, Inactivity Leak, Liquid Staking, 流动性质押, Solo Staking]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # Proof of Stake（权益证明）
@@ -70,3 +70,4 @@ PoS 换了一种成本。你想参与，先得把一大笔钱押在链上。一�
 - [[Finality（最终性）]]：投票攒到 2/3 质押量，区块才变成不可逆。
 - [[51% Attack（51% 攻击）]]：PoS 里对应的攻击门槛是 1/3 和 2/3。
 - [[Crypto Wallet（加密钱包）]]：提款地址对应的私钥，同样由钱包保管。
+- [[Proof of Work（工作量证明）]]：PoS 用押金代替 PoW 的电费，比特币没有押金，靠电费和拉黑挡捣乱。

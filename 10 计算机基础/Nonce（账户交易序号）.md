@@ -3,7 +3,7 @@ type: 技术卡片
 status: 草稿
 aliases: [Nonce, 账户 Nonce, 交易序号, 账户交易序号, Account Nonce, Replay Protection, 重放保护, Speed up, Cancel, nonce too low, replacement transaction underpriced]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # Nonce（账户交易序号）
@@ -61,6 +61,10 @@ Nonce 是账户自己的计数器，从 0 开始，每发出一笔 TX 就加 1�
 
 **挖矿里的 nonce 是另一回事。** PoW 矿工不断试的那个数，用来凑出满足难度的哈希，和账户 nonce 只是同名。
 
+**收钱不加 nonce。** 只有你自己发出一笔 TX 才加 1。别人转给你，你的 nonce 不动。去质押、调合约都是你发的 TX，会加。
+
+**nonce 防的是重放，不是冒签。** 别人没有你的私钥，签不出你的签名，验签那一步就挡住了。nonce 挡的是把你签过的真 TX 复制再发一遍。
+
 **比特币没有账户 nonce。** 比特币用 UTXO 模型：每个币是一张独立的"钞票"，花掉就作废，天然防重放。账户 nonce 是 account-based 模型（ETH 用的）才需要的设计。
 
 ## 关联
@@ -68,3 +72,4 @@ Nonce 是账户自己的计数器，从 0 开始，每发出一笔 TX 就加 1�
 - [[为什么账户交易需要 nonce]]：为什么用一个整数就解决了去重、排序、替换，对比了几种笨办法。
 - [[Transaction（区块链交易）]]：Nonce 是 TX 里的一个字段，TX 的完整流程在那张卡。
 - [[Crypto Wallet（加密钱包）]]：钱包发 TX 前要向节点查 nonce，多设备共用账户时会冲突。
+- [[Proof of Work（工作量证明）]]：同名的挖矿 nonce 在那张卡，别和账户 nonce 混。
